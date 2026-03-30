@@ -1,0 +1,116 @@
+# Team-Konfiguration: AI Transparency Days 2026
+
+# Trage hier die tatsächlichen Team-Mitglieder ein
+
+team:
+  # Projektleitung
+  - role: "Projektleitung"
+    name: "TBD"
+    contact: "TBD"
+    responsibilities:
+      - "Gesamtverantwortung"
+      - "Kommunikation mit COAI und Betreuern"
+      - "Meilenstein-Freigaben"
+
+  # Workstream-Verantwortliche
+  - role: "Programm und Inhalt"
+    name: "TBD"
+    contact: "TBD"
+    agent: "programm"
+    responsibilities:
+      - "CfP-Management"
+      - "Programm-Kuration"
+      - "Speaker-Kommunikation"
+
+  - role: "Kommunikation und Marketing"
+    name: "TBD"
+    contact: "TBD"
+    agent: "kommunikation"
+    responsibilities:
+      - "Social Media"
+      - "Newsletter"
+      - "Presse"
+      - "Website-Texte"
+
+  - role: "Teilnehmer-Management"
+    name: "TBD"
+    contact: "TBD"
+    agent: "operations"
+    responsibilities:
+      - "Registrierungssystem"
+      - "Check-In"
+      - "Teilnehmer-Kommunikation"
+
+  - role: "Venue und Logistik"
+    name: "TBD"
+    contact: "TBD"
+    agent: "operations"
+    responsibilities:
+      - "Venue-Buchung"
+      - "Raumplanung"
+      - "Auf- und Abbau"
+
+  - role: "Catering und Rahmenprogramm"
+    name: "TBD"
+    contact: "TBD"
+    agent: "operations"
+    responsibilities:
+      - "Catering-Beauftragung"
+      - "Abendprogramm"
+      - "Networking-Events"
+
+  - role: "Technik und Infrastruktur"
+    name: "TBD"
+    contact: "TBD"
+    agent: "operations"
+    responsibilities:
+      - "AV-Equipment"
+      - "WiFi"
+      - "Streaming"
+      - "Hackathon-Infrastruktur"
+
+  - role: "Personal und Organisation"
+    name: "TBD"
+    contact: "TBD"
+    agent: "koordination"
+    responsibilities:
+      - "Helfer-Rekrutierung"
+      - "Schichtplanung"
+      - "Helfer-Briefings"
+
+  - role: "Sponsoring und Budget"
+    name: "TBD"
+    contact: "TBD"
+    agent: "koordination"
+    responsibilities:
+      - "Sponsoren-Akquise"
+      - "Budget-Tracking"
+      - "Sponsoring-Verträge"
+
+  - role: "Unterkunft und Anreise"
+    name: "TBD"
+    contact: "TBD"
+    agent: "kommunikation"
+    responsibilities:
+      - "Hotelkontingente"
+      - "Anreiseinformationen"
+
+  - role: "Nachbereitung"
+    name: "TBD"
+    contact: "TBD"
+    agent: "dokumentation"
+    responsibilities:
+      - "Feedback-Auswertung"
+      - "Materialien veröffentlichen"
+      - "Abschlussbericht"
+
+# Externe Stakeholder
+stakeholders:
+  - role: "Auftraggeber"
+    name: "COAI gGmbH"
+    contact: "Steffen Höpfner"
+    website: "https://www.coairesearch.org"
+
+  - role: "Betreuung"
+    name: "Prof. Dr. Sigurd Schacht"
+    affiliation: "Hochschule Ansbach"
