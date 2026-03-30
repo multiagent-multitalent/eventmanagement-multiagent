@@ -2,6 +2,22 @@
 
 Willkommen im Event-Management-System für die **AI Transparency Days 2026** (AITD 2026).
 
+---
+
+## 🚀 Schnellstart (für Menschen)
+
+**→ [`QUICKSTART.md`](QUICKSTART.md)** – In 3 Schritten zur fertigen Event-Planung:
+1. `config/event.yaml` ausfüllen
+2. Orchestrator-Agent starten
+3. `CONFIRM.md` bestätigen
+
+**Aktueller Status:** [`dashboard/status.md`](dashboard/status.md)
+**Offene Bestätigungen:** [`CONFIRM.md`](CONFIRM.md)
+
+---
+
+## Für KI-Agenten: Wie dieses System funktioniert
+
 Dieses Repository ist das zentrale Arbeitssystem für alle Planungsprozesse. Du als Agent kannst hier:
 - Den aktuellen Planungsstand einsehen (`dashboard/status.md`)
 - Aufgaben in den Workstreams bearbeiten (`workstreams/`)
@@ -15,10 +31,11 @@ Dieses Repository ist das zentrale Arbeitssystem für alle Planungsprozesse. Du 
 
 ### Agenten-Rollen
 
-Es gibt **5 spezialisierte Agenten**, jeder mit eigenem Fokusbereich:
+Es gibt **6 Agenten** – 1 Orchestrator und 5 Fachagenten:
 
 | Agent | Datei | Fokus |
 |---|---|---|
+| **Orchestrator** | `.claude/agents/orchestrator.md` | **Vollautomatische Planung aus event.yaml** |
 | Kommunikation | `.claude/agents/kommunikation.md` | Social Media, Newsletter, Presse, E-Mail |
 | Operations | `.claude/agents/operations.md` | Checklisten, Logistik, Bestellungen, Abhängigkeiten |
 | Programm | `.claude/agents/programm.md` | CfP, Zeitplan, Sessions, Speaker-Briefings |
@@ -27,6 +44,7 @@ Es gibt **5 spezialisierte Agenten**, jeder mit eigenem Fokusbereich:
 
 ### Wo du anfangen sollst
 
+0. **Prüfe `QUICKSTART.md`** – wenn du neu bist und alles automatisch erledigen willst
 1. **Lese `config/event.yaml`** – Event-Eckdaten, Datum, Ort, Größe
 2. **Lese `dashboard/status.md`** – aktueller Stand aller Workstreams
 3. **Lese deine Agenten-Konfiguration** in `.claude/agents/` – deine Rolle und Verantwortlichkeiten
@@ -64,8 +82,11 @@ Unter `templates/` liegen Vorlagen für alle Planungsphasen – gegliedert nach 
 ```text
 eventmanagement-multiagent/
 ├── CLAUDE.md                        # Dieser Einstiegspunkt
+├── QUICKSTART.md                    # 🚀 Schnellstart für Menschen (3 Schritte)
+├── CONFIRM.md                       # ✅ Finale Bestätigung nach Agent-Durchlauf
 ├── Task Requirements.md             # Aufgabenstellung des Projekts
-├── .claude/agents/                  # 5 Agenten-Konfigurationen
+├── .claude/agents/                  # 6 Agenten-Konfigurationen
+│   ├── orchestrator.md              # 🤖 Master-Orchestrator (vollautomatisch)
 │   ├── kommunikation.md
 │   ├── operations.md
 │   ├── programm.md
@@ -84,6 +105,7 @@ eventmanagement-multiagent/
 │   ├── technik/
 │   ├── personal/
 │   ├── sponsoring/
+│   ├── budget/
 │   ├── unterkunft-anreise/
 │   └── nachbereitung/
 ├── config/                          # Event- und Team-Konfiguration
