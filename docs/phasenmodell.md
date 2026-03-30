@@ -123,11 +123,11 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 | Kick-off | Anfang April 2026 | Phase 1 |
 | Konzept finalisiert | Mitte April 2026 | Phase 1 → 2 |
 | CfP veröffentlicht | Ende April 2026 | Phase 2 |
+| Registrierung geöffnet | Mai 2026 | Phase 2/3 |
 | Venue gebucht | Mai 2026 | Phase 2 |
 | Zwischenbericht | Mai/Juni 2026 | Phase 2 → 3 |
 | CfP-Deadline | Juni 2026 | Phase 3 |
-| Programm finalisiert | Juli 2026 | Phase 3 |
 | Abschlussbericht | Ende Juni 2026 | Phase 3 |
-| Registrierung geöffnet | Mai 2026 | Phase 3 |
-| Event | Oktober 2026 | Phase 4 |
+| Programm finalisiert | Juli 2026 | Phase 3 |
+| Event | 14.–16. Oktober 2026 | Phase 4 |
 | Nachbereitung abgeschlossen | November 2026 | Phase 5 |

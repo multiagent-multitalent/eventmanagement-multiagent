@@ -8,7 +8,7 @@
 
 | Aspekt | Anforderung |
 |---|---|
-| Datum | [Datum eintragen, ca. Oktober 2026] |
+| Datum | 14.–16. Oktober 2026 (siehe `config/event.yaml`) |
 | Aufbautag | [Tag vor dem Event] |
 | Abbautag | [Tag nach dem Event] |
 | Teilnehmer | 100–150 |
