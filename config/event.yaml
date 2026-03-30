@@ -1,0 +1,89 @@
+# Event-Konfiguration: AI Transparency Days 2026
+
+event:
+  name: "AI Transparency Days 2026"
+  short_name: "AITD 2026"
+  edition: 2026
+
+  # Datum (Vorschlag – bitte durch Team bestätigen)
+  date_start: "2026-10-14"
+  date_end: "2026-10-16"
+  duration_days: 3
+
+  # Ort
+  city: "Nürnberg"
+  region: "Franken, Bayern"
+  country: "Deutschland"
+  venue: "TBD"  # wird nach Recherche ergänzt
+
+  # Größe
+  attendees_expected: 125
+  attendees_min: 100
+  attendees_max: 150
+
+  # Format
+  format:
+    - "Konferenz"
+    - "Workshops"
+    - "Hackathon"
+  tracks: 3
+  days_format: "Parallele Tracks + Hauptbühne"
+
+  # Themen
+  topics:
+    - "AI Transparency"
+    - "AI Safety"
+    - "AI Governance"
+    - "Human Compatible AI"
+
+  # Zielgruppe
+  target_audience:
+    - "Forschende"
+    - "Praktiker"
+    - "Studierende"
+    - "Policymaker"
+
+  # Sprachen
+  languages:
+    - "Deutsch"
+    - "Englisch"
+
+  # Veranstalter
+  organizer:
+    name: "COAI gGmbH"
+    full_name: "Gemeinnütziges Forschungsinstitut für Human Compatible AI"
+    website: "https://www.coairesearch.org"
+    city: "Nürnberg"
+
+  # Betreuung
+  supervision:
+    - name: "Prof. Dr. Sigurd Schacht"
+      affiliation: "Hochschule Ansbach"
+    - name: "Steffen Höpfner"
+      affiliation: "COAI gGmbH"
+
+# Zeitplan (Projektmeilensteine)
+milestones:
+  kickoff: "2026-04-01"        # Anfang April 2026
+  interim_report: "2026-05-31" # Mitte/Ende Mai 2026
+  final_report: "2026-06-30"   # Ende Juni 2026
+  cfp_open: "2026-04-30"       # Ende April 2026 (Vorschlag)
+  cfp_deadline: "2026-06-15"   # Mitte Juni 2026 (Vorschlag)
+  program_final: "2026-07-31"  # Ende Juli 2026 (Vorschlag)
+  registration_open: "2026-05-01" # Anfang Mai 2026 (Vorschlag)
+  event_start: "2026-10-14"
+  event_end: "2026-10-16"
+  post_event_done: "2026-11-30"
+
+# Budget (Rahmenwerte – bitte durch Team konkretisieren)
+budget:
+  currency: "EUR"
+  total_estimated: "TBD"
+  categories:
+    - venue
+    - catering
+    - technik
+    - kommunikation
+    - personal
+    - drucksachen
+    - sonstiges
