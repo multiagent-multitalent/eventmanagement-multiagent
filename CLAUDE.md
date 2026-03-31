@@ -86,7 +86,7 @@ eventmanagement-multiagent/
 ├── CLAUDE.md                        # Dieser Einstiegspunkt
 ├── QUICKSTART.md                    # 🚀 Schnellstart für Menschen (3 Schritte)
 ├── CONFIRM.md                       # ✅ Finale Bestätigung nach Agent-Durchlauf
-├── Task Requirements.md             # Aufgabenstellung des Projekts
+├── archiv/2026-03-repository-cleanup/Task Requirements.md  # archivierte Aufgabenstellung
 ├── .claude/agents/                  # 6 Agenten-Konfigurationen
 │   ├── orchestrator.md              # 🤖 Master-Orchestrator (vollautomatisch)
 │   ├── kommunikation.md

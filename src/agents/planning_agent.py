@@ -93,6 +93,7 @@ def run_planning_agent(state: EventPlanningState) -> dict[str, Any]:
     event_data = state.get("event_data", {})
     user_decision = state.get("user_decision") or {}
     task_packages: list[TaskPackage] = list(state.get("task_packages", []))
+    agent_journal = list(state.get("agent_journal", []))
 
     new_packages: list[TaskPackage] = [
         {
@@ -120,6 +121,15 @@ def run_planning_agent(state: EventPlanningState) -> dict[str, Any]:
     existing_ids = {"AP2.1", "AP2.2", "AP2.3"}
     task_packages = [p for p in task_packages if p["id"] not in existing_ids]
     task_packages.extend(new_packages)
+    agent_journal.append(
+        {
+            "agent": "Planungs-Agent",
+            "phase": "stage2",
+            "action": "Agenda-, Logistik- und Budgetplanung gestartet",
+            "rationale": "Nach der Freigabe werden konkrete Umsetzungsartefakte benoetigt.",
+            "outcome": "Planung laeuft.",
+        }
+    )
 
     try:
         llm = create_llm()
@@ -149,9 +159,21 @@ def run_planning_agent(state: EventPlanningState) -> dict[str, Any]:
                 total = planning_output.get("budget", {}).get("total_estimated", "TBD")
                 pkg["output"] = f"Budgetentwurf: {total} EUR Gesamtkosten"
 
+        total = planning_output.get("budget", {}).get("total_estimated", "TBD")
+        agent_journal.append(
+            {
+                "agent": "Planungs-Agent",
+                "phase": "stage2",
+                "action": "Planungsartefakte abgeschlossen",
+                "rationale": "Die Auswahl aus Stage 1 wurde in umsetzbare Planung ueberfuehrt.",
+                "outcome": f"Budgetentwurf ({total} EUR) und Detailplanung erstellt.",
+            }
+        )
+
         return {
             "task_packages": task_packages,
             "planning_output": planning_output,
+            "agent_journal": agent_journal,
             "error": None,
         }
 
@@ -161,7 +183,17 @@ def run_planning_agent(state: EventPlanningState) -> dict[str, Any]:
             if pkg["id"] in ("AP2.1", "AP2.2", "AP2.3"):
                 pkg["status"] = "error"
                 pkg["output"] = str(exc)
+        agent_journal.append(
+            {
+                "agent": "Planungs-Agent",
+                "phase": "stage2",
+                "action": "Planung fehlgeschlagen",
+                "rationale": "Die Verarbeitung konnte nicht sauber abgeschlossen werden.",
+                "outcome": str(exc),
+            }
+        )
         return {
             "task_packages": task_packages,
+            "agent_journal": agent_journal,
             "error": str(exc),
         }

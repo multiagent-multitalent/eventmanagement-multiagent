@@ -2,14 +2,61 @@
 
 import json
 import logging
+from urllib import error as urlerror
+from urllib import parse as urlparse
+from urllib import request as urlrequest
 from typing import Any
 
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage
 
-from src.config import get_llm_config
+from src.config import default_llm_base_url, get_llm_config, normalize_llm_provider
 
 logger = logging.getLogger(__name__)
+
+
+def _http_get_json(url: str, headers: dict[str, str] | None = None, timeout: float = 6.0) -> dict[str, Any]:
+    req = urlrequest.Request(url, headers=headers or {}, method="GET")
+    with urlrequest.urlopen(req, timeout=timeout) as response:
+        payload = response.read().decode("utf-8")
+    return json.loads(payload)
+
+
+def _normalize_models_base_url(provider: str, base_url: str) -> str:
+    normalized_provider = normalize_llm_provider(provider)
+    cleaned = (base_url or default_llm_base_url(normalized_provider)).rstrip("/")
+    if normalized_provider in {"openai", "openai_compatible", "lmstudio", "localai"} and not cleaned.endswith("/v1"):
+        return f"{cleaned}/v1"
+    return cleaned
+
+
+def list_available_models(provider: str, base_url: str, api_key: str = "") -> tuple[list[str], str | None]:
+    """Discover available model IDs from the configured provider endpoint."""
+    normalized_provider = normalize_llm_provider(provider)
+    normalized_base_url = _normalize_models_base_url(normalized_provider, base_url)
+
+    try:
+        if normalized_provider == "ollama":
+            endpoint = urlparse.urljoin(f"{normalized_base_url}/", "api/tags")
+            data = _http_get_json(endpoint)
+            models = [str(item.get("name", "")).strip() for item in data.get("models", []) if item.get("name")]
+            unique_models = list(dict.fromkeys([m for m in models if m]))
+            return unique_models, None
+
+        if normalized_provider in {"openai", "openai_compatible", "lmstudio", "localai"}:
+            endpoint = urlparse.urljoin(f"{normalized_base_url}/", "models")
+            headers = {"Content-Type": "application/json"}
+            if api_key:
+                headers["Authorization"] = f"Bearer {api_key}"
+            data = _http_get_json(endpoint, headers=headers)
+            models = [str(item.get("id", "")).strip() for item in data.get("data", []) if item.get("id")]
+            unique_models = list(dict.fromkeys([m for m in models if m]))
+            return unique_models, None
+
+        return [], f"Provider '{normalized_provider}' wird für Modellabfrage nicht unterstützt."
+    except (urlerror.URLError, TimeoutError, json.JSONDecodeError, OSError) as exc:
+        logger.warning("Model discovery failed for provider '%s': %s", normalized_provider, exc)
+        return [], str(exc)
 
 
 # ---------------------------------------------------------------------------
@@ -344,7 +391,7 @@ def create_llm() -> BaseChatModel:
             llm.invoke("Verbindungstest")
             return llm
 
-        if provider in ("openai", "openai_compatible"):
+        if provider in ("openai", "openai_compatible", "lmstudio", "localai"):
             from langchain_openai import ChatOpenAI
 
             return ChatOpenAI(

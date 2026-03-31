@@ -4,8 +4,10 @@ Usage:
     python -m src.main
 """
 
+import argparse
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -14,6 +16,22 @@ from src.workflows.event_planning_graph import create_event_planning_graph, crea
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Event-Management Orchestrator CLI")
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Wählt automatisch die jeweils erste Option in Stage 1 und startet Stage 2 ohne Rückfrage.",
+    )
+    parser.add_argument("--venue", type=str, default="", help="Venue-Name für automatische Auswahl.")
+    parser.add_argument("--catering", type=str, default="", help="Catering-Name für automatische Auswahl.")
+    parser.add_argument("--notes", type=str, default="", help="Anmerkungen für die Freigabe in Stage 1.")
+    parser.add_argument("--provider", type=str, default="", help="LLM-Provider (z. B. ollama, lmstudio, localai).")
+    parser.add_argument("--model", type=str, default="", help="LLM-Modellname.")
+    parser.add_argument("--base-url", type=str, default="", help="LLM-Base-URL.")
+    return parser.parse_args()
 
 
 def _print_section(title: str) -> None:
@@ -46,15 +64,20 @@ def _print_catering_options(catering_options: list[dict]) -> None:
 
 def _select_option(options: list[dict], label: str) -> str:
     """Prompt user to select one option by number."""
+    if not options:
+        return ""
+
     while True:
         try:
             raw = input(f"\n{label} (1-{len(options)}): ").strip()
+            if raw == "":
+                return options[0].get("name", "Option 1")
             idx = int(raw) - 1
             if 0 <= idx < len(options):
                 return options[idx].get("name", f"Option {idx+1}")
-            print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben.")
+            print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben (oder Enter für Option 1).")
         except ValueError:
-            print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben.")
+            print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben (oder Enter für Option 1).")
         except EOFError:
             # Non-interactive environment: default to first option
             print(f"  Nicht-interaktiver Modus – wähle automatisch Option 1.")
@@ -62,6 +85,22 @@ def _select_option(options: list[dict], label: str) -> str:
         except KeyboardInterrupt:
             print("\nAbgebrochen.")
             sys.exit(0)
+
+
+def _pick_option_by_name(options: list[dict], desired_name: str) -> str:
+    if not options:
+        return ""
+    if not desired_name.strip():
+        return options[0].get("name", "Option 1")
+
+    desired_lower = desired_name.strip().lower()
+    for opt in options:
+        name = str(opt.get("name", "")).strip()
+        if name.lower() == desired_lower:
+            return name
+
+    print(f"  Hinweis: '{desired_name}' nicht gefunden. Verwende Option 1.")
+    return options[0].get("name", "Option 1")
 
 
 def _save_json_output(state: dict, repo_root: Path) -> None:
@@ -76,6 +115,15 @@ def _save_json_output(state: dict, repo_root: Path) -> None:
 
 
 def main() -> None:
+    args = _parse_args()
+
+    if args.provider:
+        os.environ["LLM_PROVIDER"] = args.provider
+    if args.model:
+        os.environ["LLM_MODEL"] = args.model
+    if args.base_url:
+        os.environ["LLM_BASE_URL"] = args.base_url
+
     print("\n🎪  Event-Management Orchestrator – CLI")
     print("    Vollautomatische Event-Planung mit KI-Agenten\n")
 
@@ -146,16 +194,27 @@ def main() -> None:
     # -----------------------------------------------------------------------
     _print_section("Ihre Entscheidung")
 
-    selected_venue = _select_option(venue_options, "Venue auswählen")
+    auto_mode = args.auto or bool(args.venue.strip()) or bool(args.catering.strip())
+
+    if auto_mode:
+        selected_venue = _pick_option_by_name(venue_options, args.venue)
+        selected_catering = _pick_option_by_name(catering_options, args.catering)
+        notes = args.notes.strip()
+        print("  Auto-Modus aktiv – Stage 1 wird ohne manuelle Eingabe freigegeben.")
+    else:
+        selected_venue = _select_option(venue_options, "Venue auswählen")
+        print(f"  ✓ Venue ausgewählt: {selected_venue}")
+
+        selected_catering = _select_option(catering_options, "Catering auswählen")
+        print(f"  ✓ Catering ausgewählt: {selected_catering}")
+
+        try:
+            notes = input("\n  Anmerkungen (optional, Enter zum Überspringen): ").strip()
+        except (EOFError, KeyboardInterrupt):
+            notes = ""
+
     print(f"  ✓ Venue ausgewählt: {selected_venue}")
-
-    selected_catering = _select_option(catering_options, "Catering auswählen")
     print(f"  ✓ Catering ausgewählt: {selected_catering}")
-
-    try:
-        notes = input("\n  Anmerkungen (optional, Enter zum Überspringen): ").strip()
-    except (EOFError, KeyboardInterrupt):
-        notes = ""
 
     user_decision = {
         "selected_venue": selected_venue,

@@ -1,79 +1,60 @@
 # Event-Management mit KI-Agenten
 
-Dieses Repository ist ein universelles Planungssystem für Events jeder Art – von Konferenzen über Workshops bis zu Hackathons. KI-Agenten übernehmen die gesamte Routineplanung; du gibst nur die Event-Details ein.
+Dieses Repository ist ein wiederverwendbares System zur Event-Planung mit spezialisierten KI-Agenten.
+Die Demo-Implementierung ist AI Transparency Days 2026 unter [examples/aitd-2026](examples/aitd-2026).
 
-> **Demo-Beispiel:** Die AI Transparency Days 2026 (AITD 2026) dienen als Referenzimplementierung und zeigen, was das System automatisch generiert. Alle Demo-Artefakte liegen in [`examples/aitd-2026/`](examples/aitd-2026/).
+## Startpunkte
 
----
+1. Für Menschen: [QUICKSTART.md](QUICKSTART.md)
+2. Für Agenten: [CLAUDE.md](CLAUDE.md)
+3. Projektstatus: [dashboard/status.md](dashboard/status.md)
+4. Bestätigungen: [CONFIRM.md](CONFIRM.md)
 
-## Schnellstart für KI-Agenten
+## Struktur auf einen Blick
 
-→ Lies zuerst **[CLAUDE.md](CLAUDE.md)** – dort wird erklärt, wie das System funktioniert.
+| Bereich | Inhalt | Einstieg |
+|---|---|---|
+| Konfiguration | Event- und Teamdaten | [config/event.yaml](config/event.yaml), [config/team.yaml](config/team.yaml) |
+| Steuerungsdoku | Rollen, Phasen, Ablagelogik | [docs/README.md](docs/README.md) |
+| Arbeitspakete | Phasenbasierter Masterplan (was zu tun ist) | [arbeitspakete/README.md](arbeitspakete/README.md) |
+| Workstreams | Laufende/generierte Artefakte (was schon erarbeitet ist) | [workstreams/README.md](workstreams/README.md) |
+| Vorlagen | Wiederverwendbare Templates nach Bereich | [templates/README.md](templates/README.md) |
+| Dashboard | Status- und Zeitsteuerung | [dashboard/status.md](dashboard/status.md), [dashboard/zeitplan.md](dashboard/zeitplan.md) |
+| Orchestrator-Code | Python-Code für CLI/UI/Workflow | [src/main.py](src/main.py), [streamlit_app.py](streamlit_app.py) |
+| Demo-Outputs | Vollständiges Referenzbeispiel | [examples/README.md](examples/README.md) |
 
-## Schnellstart für Menschen
+## Typischer Ablauf
 
-1. **Event-Konfiguration:** [`config/event.yaml`](config/event.yaml) – Eckdaten des Events
-2. **Team-Konfiguration:** [`config/team.yaml`](config/team.yaml) – Rollen und Verantwortliche eintragen
-3. **Dashboard:** [`dashboard/status.md`](dashboard/status.md) – aktueller Stand aller Arbeitsbereiche
-4. **Phasenmodell:** [`docs/phasenmodell.md`](docs/phasenmodell.md) – was wann passieren muss
+1. Eventdaten in [config/event.yaml](config/event.yaml) pflegen.
+2. Orchestrator starten (Agent oder Streamlit).
+3. Ergebnisse in [workstreams](workstreams) und Status in [dashboard/status.md](dashboard/status.md) prüfen.
+4. Entscheidungen in [CONFIRM.md](CONFIRM.md) bestätigen.
 
----
+## Lokaler Betrieb
 
-## Repository-Struktur
+CLI:
 
-```text
-eventmanagement-multiagent/
-├── CLAUDE.md                        # Einstiegspunkt für KI-Agenten
-├── QUICKSTART.md                    # 🚀 Schnellstart (3 Schritte)
-├── CONFIRM.md                       # ✅ Bestätigungsdokument (nach Orchestrator-Lauf)
-├── .claude/agents/                  # 6 Agenten-Konfigurationen
-│   ├── orchestrator.md              # Master-Orchestrator
-│   ├── kommunikation.md
-│   ├── operations.md
-│   ├── programm.md
-│   ├── koordination.md
-│   └── dokumentation.md
-├── docs/                            # Phasenmodell, Workstreams, Rollen
-├── templates/                       # Artefakt-Vorlagen für alle Phasen
-├── config/                          # Event- und Team-Konfiguration
-│   ├── event.yaml                   # ← Hier deine Event-Details eintragen
-│   └── team.yaml
-├── workstreams/                     # Laufende Arbeit pro Bereich (vom Orchestrator befüllt)
-│   ├── programm/
-│   ├── kommunikation/
-│   ├── teilnehmer/
-│   ├── venue-logistik/
-│   ├── catering/
-│   ├── technik/
-│   ├── personal/
-│   ├── sponsoring/
-│   ├── unterkunft-anreise/
-│   └── nachbereitung/
-├── examples/                        # 📖 Demo-Outputs für fertige Events
-│   └── aitd-2026/                   # AI Transparency Days 2026 – vollständiges Beispiel
-├── dashboard/                       # Status und Tracking
-│   └── status.md
-└── archiv/                          # Entscheidungslog, Lessons Learned
+```bash
+python -m src.main
 ```
 
----
+Streamlit:
 
-## Für welche Events geeignet?
+```bash
+streamlit run streamlit_app.py
+```
 
-Das System funktioniert für jede Art von Event:
+Smoke-Test:
 
-- **Konferenzen** (z. B. Fachkonferenzen, Community-Events)
-- **Workshops & Seminare**
-- **Hackathons**
-- **Hybride Events** (Präsenz + Online)
-- Jede Kombination davon
+```bash
+python -m unittest discover -s tests -p "test_*.py"
+```
 
-Einfach `config/event.yaml` anpassen – der Rest läuft automatisch.
+## Ablageregel
 
----
+- Neues im Planungsprozess: nach [arbeitspakete](arbeitspakete)
+- Neue operative Ergebnisse: nach [workstreams](workstreams)
+- Wiederverwendbare Muster: nach [templates](templates)
+- Methoden und Governance: nach [docs](docs)
 
-## Demo-Beispiel
-
-Die **AI Transparency Days 2026** (Konferenz, 125 Teilnehmer, Nürnberg) dienen als vollständiges Beispiel:
-
-→ [`examples/aitd-2026/`](examples/aitd-2026/) – Alle generierten Artefakte ansehen
+Details: [docs/repository-structure.md](docs/repository-structure.md)

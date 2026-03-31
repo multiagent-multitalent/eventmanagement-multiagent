@@ -1,137 +1,44 @@
-# Quickstart: Event-Planung mit KI-Agenten
+# Quickstart
 
-Dieses Repository ermöglicht vollständige Event-Planung durch KI-Agenten – du gibst die Event-Details ein, die Agenten erledigen den Rest. Es funktioniert für **jedes Event**: Konferenzen, Workshops, Hackathons, Seminare und mehr.
+In 3 Schritten zur lauffähigen Event-Planung mit Agenten.
 
-> **Demo:** Sieh dir [`examples/aitd-2026/`](examples/aitd-2026/) an – dort findest du alle Artefakte, die der Orchestrator für die AI Transparency Days 2026 automatisch generiert hat.
+## 1. Konfiguration eintragen
 
----
+Pflege die Basisdaten in:
 
-## In 3 Schritten zur fertigen Event-Planung
+- [config/event.yaml](config/event.yaml)
+- [config/team.yaml](config/team.yaml)
 
-### Schritt 1: Event-Details eintragen (5 Minuten)
+## 2. Planung starten
 
-Öffne `config/event.yaml` und fülle die Felder aus:
+Es gibt zwei Wege.
 
-```yaml
-event:
-  name: "Dein Event-Name"
-  date_start: "YYYY-MM-DD"
-  date_end: "YYYY-MM-DD"
-  city: "Deine Stadt"
-  attendees_expected: 100
-  # ... weitere Details
-```
+Agentisch über den Orchestrator:
 
-Das war es. Der Rest läuft automatisch.
+- Einstieg: [CLAUDE.md](CLAUDE.md)
+- Orchestrator-Profil: [.claude/agents/orchestrator.md](.claude/agents/orchestrator.md)
 
----
-
-### Schritt 2: Orchestrator starten
-
-Starte den **Orchestrator-Agenten** (`.claude/agents/orchestrator.md`) mit folgendem Prompt:
-
-```
-Lies config/event.yaml und führe die vollständige Event-Planung durch.
-Generiere alle Artefakte für alle Workstreams gemäß CLAUDE.md.
-```
-
-Der Orchestrator übernimmt automatisch:
-
-| Phase | Was passiert | Wer macht es |
-|---|---|---|
-| 🚀 Initialisierung | Event-Konzept, Team-Setup, Meilensteine | Orchestrator |
-| 📋 Planung | Venue-Konzept, CfP, Budget-Rahmen, Kommunikationsplan | Alle 5 Agenten |
-| ⚙️ Umsetzung | Alle Planungsartefakte generieren | Alle 5 Agenten |
-| 🎯 Finalisierung | Dashboard aktualisieren, Bestätigung vorbereiten | Koordination |
-
----
-
-### Schritt 3: Bestätigen (10 Minuten)
-
-Öffne `CONFIRM.md` – dort findet sich eine Zusammenfassung aller generierten Artefakte und die finalen Entscheidungen, die menschliche Bestätigung brauchen:
-
-- [ ] Event-Konzept freigeben
-- [ ] Venue-Auswahl bestätigen
-- [ ] Budget-Rahmen genehmigen
-- [ ] Programm-Konzept bestätigen
-- [ ] Kommunikationsplan freigeben
-
----
-
-## Was der Orchestrator automatisch generiert
-
-Nach dem Start erstellt der Orchestrator automatisch alle Planungsartefakte:
-
-### Programm
-- `workstreams/programm/track-konzept.md` – Detailliertes Track-Konzept mit 3 parallelen Tracks
-- `workstreams/programm/cfp-ausschreibung.md` – Call for Papers (DE + EN)
-- `workstreams/programm/agenda-entwurf.md` – Vorläufige Tagesagenda
-
-### Kommunikation
-- `workstreams/kommunikation/kommunikationsplan.md` – Kommunikationsplan mit Zeitlinie
-- `workstreams/kommunikation/social-media-kit.md` – Social-Media-Posts für alle Phasen
-- `workstreams/kommunikation/pressemitteilung-entwurf.md` – Pressemitteilung-Entwurf
-
-### Venue & Logistik
-- `workstreams/venue-logistik/venue-recherche.md` – Venue-Anforderungen und Recherche-Grundlage
-- `workstreams/venue-logistik/raumplan-entwurf.md` – Raumplanung auf Basis der Teilnehmerzahl
-
-### Teilnehmer
-- `workstreams/teilnehmer/registrierung-konzept.md` – Registrierungskonzept und Ticket-Kategorien
-- `workstreams/teilnehmer/teilnehmer-infopaket.md` – Willkommens-E-Mail und Infopaket
-
-### Catering
-- `workstreams/catering/catering-konzept.md` – Verpflegungskonzept für alle Event-Tage
-- `workstreams/catering/anbieter-liste.md` – Recherche-Grundlage für Catering-Anbieter
-
-### Technik
-- `workstreams/technik/technik-anforderungen.md` – Technische Anforderungen pro Raum
-- `workstreams/technik/technik-checkliste.md` – Checkliste für On-Site-Technik
-
-### Personal
-- `workstreams/personal/helfer-planung.md` – Helferbedarf und Schichtplan-Entwurf
-- `workstreams/personal/helfer-briefing.md` – Briefing-Vorlage für freiwillige Helfer
-
-### Sponsoring & Budget
-- `workstreams/sponsoring/sponsoring-konzept.md` – Sponsoring-Pakete und Ansprache-Strategie
-- `workstreams/sponsoring/budget-rahmen.md` – Grober Budget-Rahmen
-
-### Unterkunft & Anreise
-- `workstreams/unterkunft-anreise/hotel-recherche.md` – Hotel-Recherche-Grundlage
-- `workstreams/unterkunft-anreise/anreise-info.md` – Anreiseinformationen für Teilnehmer
-
-### Nachbereitung
-- `workstreams/nachbereitung/feedback-plan.md` – Feedback-Strategie und Survey-Link-Plan
-
-### Koordination
-- `dashboard/status.md` – Aktualisierter Dashboard-Status
-- `archiv/entscheidungslog.md` – Dokumentierte Entscheidungen
-
----
-
-## Für ein neues Event: Repository klonen
+Oder lokal als App:
 
 ```bash
-git clone https://github.com/multiagent-multitalent/eventmanagement-multiagent.git mein-event
-cd mein-event
-# config/event.yaml mit deinen Event-Details ausfüllen
-# Orchestrator starten → alle Planungsartefakte werden in workstreams/ generiert
+streamlit run streamlit_app.py
 ```
 
-Die `config/event.yaml` enthält Demo-Werte der AI Transparency Days 2026 als Orientierung. Ersetze diese mit deinen eigenen Event-Details.
+Optional CLI:
 
----
+```bash
+python -m src.main
+```
 
-## Hilfe & Orientierung
+## 3. Ergebnisse prüfen und bestätigen
 
-| Frage | Antwort findest du hier |
-|---|---|
-| Wie funktioniert das System? | `CLAUDE.md` |
-| Aktueller Planungsstand? | `dashboard/status.md` |
-| Welche Entscheidungen wurden getroffen? | `archiv/entscheidungslog.md` |
-| Welche Artefakte gibt es? | `workstreams/*/README.md` |
-| Wie sind die Agenten konfiguriert? | `.claude/agents/` |
+1. Status prüfen: [dashboard/status.md](dashboard/status.md)
+2. Workstream-Artefakte prüfen: [workstreams/README.md](workstreams/README.md)
+3. Entscheidungen bestätigen: [CONFIRM.md](CONFIRM.md)
 
----
+## Orientierung
 
-*Ziel: Du gibst die Event-Details ein – die Agenten erledigen den Rest. Nur die finale Bestätigung liegt bei dir.*
+- Dokumentationsindex: [docs/README.md](docs/README.md)
+- Arbeitspaket-Masterplan: [arbeitspakete/README.md](arbeitspakete/README.md)
+- Template-Übersicht: [templates/README.md](templates/README.md)
+- Demo-Ausgabe: [examples/aitd-2026](examples/aitd-2026)

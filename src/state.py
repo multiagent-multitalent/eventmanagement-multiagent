@@ -30,15 +30,30 @@ class CateringOption(TypedDict):
     recommendation_score: int
 
 
+class WebSource(TypedDict):
+    title: str
+    url: str
+    snippet: str
+
+
 class ResearchResults(TypedDict):
     venue_options: list[VenueOption]
     catering_options: list[CateringOption]
+    web_sources: list[WebSource]
 
 
 class UserDecision(TypedDict):
     selected_venue: str
     selected_catering: str
     notes: str
+
+
+class AgentJournalEntry(TypedDict):
+    agent: str
+    phase: str
+    action: str
+    rationale: str
+    outcome: str
 
 
 class EventPlanningState(TypedDict):
@@ -61,6 +76,10 @@ class EventPlanningState(TypedDict):
     # Stage 2 outputs
     planning_output: Optional[dict[str, Any]]
     content_output: Optional[dict[str, Any]]
+
+    # Runtime diagnostics and self-documentation
+    diagnostics: Optional[dict[str, Any]]
+    agent_journal: list[AgentJournalEntry]
 
     # UI helpers
     next_step: str

@@ -92,6 +92,7 @@ def run_content_agent(state: EventPlanningState) -> dict[str, Any]:
     user_decision = state.get("user_decision") or {}
     planning_output = state.get("planning_output") or {}
     task_packages: list[TaskPackage] = list(state.get("task_packages", []))
+    agent_journal = list(state.get("agent_journal", []))
 
     new_packages: list[TaskPackage] = [
         {
@@ -119,6 +120,15 @@ def run_content_agent(state: EventPlanningState) -> dict[str, Any]:
     existing_ids = {"AP2.4", "AP2.5", "AP2.6"}
     task_packages = [p for p in task_packages if p["id"] not in existing_ids]
     task_packages.extend(new_packages)
+    agent_journal.append(
+        {
+            "agent": "Content-Agent",
+            "phase": "stage2",
+            "action": "Kommunikationsinhalte gestartet",
+            "rationale": "Fuer die Event-Vermarktung werden konsistente Botschaften pro Kanal benoetigt.",
+            "outcome": "Inhaltserstellung laeuft.",
+        }
+    )
 
     try:
         llm = create_llm()
@@ -148,9 +158,21 @@ def run_content_agent(state: EventPlanningState) -> dict[str, Any]:
                 headline = content_output.get("press_release", {}).get("headline", "")
                 pkg["output"] = f"Pressemitteilung: {headline[:60]}…" if len(headline) > 60 else f"PM: {headline}"
 
+        channels = list(content_output.get("social_media_posts", {}).keys())
+        agent_journal.append(
+            {
+                "agent": "Content-Agent",
+                "phase": "stage2",
+                "action": "Kommunikationspaket abgeschlossen",
+                "rationale": "Die Zielgruppen werden ueber E-Mail, Social und Presse parallel angesprochen.",
+                "outcome": f"Inhalte fuer Kanaele erstellt: {', '.join(channels)}.",
+            }
+        )
+
         return {
             "task_packages": task_packages,
             "content_output": content_output,
+            "agent_journal": agent_journal,
             "error": None,
         }
 
@@ -160,7 +182,17 @@ def run_content_agent(state: EventPlanningState) -> dict[str, Any]:
             if pkg["id"] in ("AP2.4", "AP2.5", "AP2.6"):
                 pkg["status"] = "error"
                 pkg["output"] = str(exc)
+        agent_journal.append(
+            {
+                "agent": "Content-Agent",
+                "phase": "stage2",
+                "action": "Kommunikationsinhalte fehlgeschlagen",
+                "rationale": "Die Verarbeitung konnte nicht sauber abgeschlossen werden.",
+                "outcome": str(exc),
+            }
+        )
         return {
             "task_packages": task_packages,
+            "agent_journal": agent_journal,
             "error": str(exc),
         }
