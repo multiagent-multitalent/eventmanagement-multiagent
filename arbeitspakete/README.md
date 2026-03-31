@@ -11,7 +11,7 @@ Dieses Verzeichnis enthält alle Arbeitspakete (APs) für die Planung und Durchf
 ## Abhängigkeitsgraph
 
 ```
-Блок 01 – Initialisierung
+Block 01 – Initialisierung
 ├── AP-001 Event-Konzept
 ├── AP-002 Budget-Rahmen          ← abhängig von AP-001
 ├── AP-003 Sponsoring-Strategie   ← abhängig von AP-001, AP-002
@@ -79,7 +79,7 @@ Block 08 – Übergabe (Projektabschluss 30.06.2026)
          ▼ (COAI übernimmt ab hier)
 Block 09 – Event-Durchführung (COAI)
 ├── AP-043 Helfer-Briefing         ← abhängig von AP-035
-├── AP-044 Aufbau & Technik        ← abhängig von AP-044
+├── AP-044 Aufbau & Technik        ← abhängig von AP-043
 ├── AP-045 Check-In-Management     ← abhängig von AP-043, AP-032
 ├── AP-046 Event-Betrieb           ← abhängig von AP-044, AP-045
 └── AP-047 Abbau                   ← abhängig von AP-046
