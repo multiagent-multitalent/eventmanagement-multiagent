@@ -1,6 +1,8 @@
 # Dashboard: AI Transparency Days 2026
 
-*Zuletzt aktualisiert: 2026-03-30 (Automatisch durch Orchestrator-Agent)*
+*Zuletzt aktualisiert: 2026-03-31*
+
+> ⚠️ **Projektabschluss: 30. Juni 2026** – Alle Planungsarbeiten, Verträge und die Übergabe an das COAI-Team müssen bis 30.06.2026 abgeschlossen sein.
 
 ---
 
@@ -80,10 +82,10 @@
 | Venue gebucht | Mai 2026 | 🔴 Anfragen ausstehend (`venue-recherche.md`) |
 | Zwischenbericht | 31.05.2026 | 🔴 Ausstehend |
 | CfP-Deadline | 15.06.2026 | ⚪ Noch nicht relevant |
-| Abschlussbericht | 30.06.2026 | ⚪ Noch nicht relevant |
-| Programm finalisiert | 31.07.2026 | ⚪ Noch nicht relevant |
-| Event | 14.–16.10.2026 | ⚪ Noch nicht relevant |
-| Nachbereitung abgeschlossen | 30.11.2026 | ⚪ Noch nicht relevant |
+| 🏁 **PROJEKTABSCHLUSS & Abschlussbericht** | **30.06.2026** | ⚪ Ausstehend |
+| Programm finalisiert *(COAI)* | 31.07.2026 | ⚪ Post-Projekt |
+| Event *(COAI)* | 14.–16.10.2026 | ⚪ Post-Projekt |
+| Nachbereitung abgeschlossen *(COAI)* | 30.11.2026 | ⚪ Post-Projekt |
 
 ---
 
@@ -113,12 +115,20 @@
 
 ---
 
+## Projektzeitplan
+
+**→ Detaillierter Zeitplan mit Wochen, Aufgaben und Meilensteinen:** `dashboard/zeitplan.md`
+
+---
+
 ## Nächste Aktionen (priorisiert)
 
 | Priorität | Aktion | Zuständig | Bis wann |
 |---|---|---|---|
 | 🔴 Sofort | Venue-Anfragen versenden (Oktober = Hochsaison!) | Operations | April 2026 |
 | 🔴 Sofort | Team-Rollen besetzen (`config/team.yaml`) | Projektleitung | Kick-off |
+| 🔴 Sofort | Keynote-Speaker anfragen (mind. 6 Monate vor Event!) | Programm | April 2026 |
 | 🟡 Diese Woche | `CONFIRM.md` durchgehen und bestätigen | Projektleitung | April 2026 |
 | 🟡 April | CfP-Website und Registrierungstool einrichten | Operations | 30.04.2026 |
 | 🟡 April | Sponsoring-Ansprache starten | Koordination | Mai 2026 |
+| 🟡 Juni | Übergabedokumentation für COAI-Team vorbereiten | Dokumentation | **30.06.2026** |
