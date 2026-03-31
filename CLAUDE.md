@@ -124,9 +124,21 @@ eventmanagement-multiagent/
 │   └── nachbereitung/
 ├── dashboard/                       # Status und Tracking
 │   └── status.md
-└── archiv/                          # Lessons Learned, Entscheidungslog
-    ├── entscheidungslog.md
-    └── lessons-learned.md
+├── archiv/                          # Lessons Learned, Entscheidungslog
+│   ├── entscheidungslog.md
+│   └── lessons-learned.md
+└── agentic-workflows/               # 🤖 Reproduzierbare Workflow-Umsetzungen
+    ├── README.md                    # Überblick & Schnell-Entscheidungshilfe
+    ├── empfehlung.md                # Empfohlener Stack für dieses Projekt
+    ├── vergleich.md                 # Detaillierte Vergleichsmatrix
+    ├── 01-n8n/                      # Visual Workflow Automation
+    ├── 02-langchain-langgraph/      # Python AI Agent Framework
+    ├── 03-flowise/                  # Visual LangChain UI
+    ├── 04-dify/                     # LLM Application Platform
+    ├── 05-autogen/                  # Multi-Agent Conversation Framework
+    ├── 06-crewai/                   # Multi-Agent Orchestration (empfohlen)
+    ├── 07-prefect/                  # Workflow Orchestration
+    └── lokale-ki-modelle/           # Ollama, LocalAI, vLLM, LM Studio
 ```
 
 ---
