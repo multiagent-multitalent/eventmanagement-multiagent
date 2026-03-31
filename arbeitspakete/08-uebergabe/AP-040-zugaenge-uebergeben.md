@@ -21,12 +21,11 @@ Alle digitalen Zugänge, Accounts und Systeme an COAI gGmbH übergeben und siche
 - `workstreams/nachbereitung/uebergabe-dokumentation.md` – Übersicht aller Systeme und Zugänge
 
 ## Aufgaben (Checkliste)
-- [ ] Alle digitalen Systeme inventarisieren: Website-CMS, Registrierungstool, Social-Media-Accounts, E-Mail-Accounts, Newsletter-Tool, CfP-Plattform, Cloud-Speicher (Repository)
+- [ ] Alle digitalen Systeme inventarisieren: Website-CMS, Registrierungstool, Social-Media-Accounts, E-Mail-Accounts, Newsletter-Tool, Cloud-Speicher (Repository)
 - [ ] Für jedes System: COAI-Admin-Zugang einrichten oder Credentials übergeben
 - [ ] Website: COAI als Admin hinzufügen, Studierenden-Accounts auf Redakteur/Viewer zurückstufen oder entfernen
 - [ ] Registrierungstool: COAI-Admin-Zugang einrichten, Test-Transaktion durchführen
 - [ ] Social-Media-Accounts: Account-Ownership oder Zugangsdaten übergeben
-- [ ] CfP-Plattform: Übertragung der Admin-Rechte, Export aller Einreichungsdaten
 - [ ] Repository (GitHub): COAI-Teammitglieder als Owner/Admin hinzufügen
 - [ ] Übergabe-Protokoll erstellen: was wurde wann übergeben, von wem an wen
 - [ ] Übergabe-Protokoll in `workstreams/nachbereitung/zugaenge-uebergabe.md` dokumentieren

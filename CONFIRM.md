@@ -44,16 +44,16 @@ Dokument: `workstreams/programm/track-konzept.md`
 - [ ] ✅ Track-Konzept so freigegeben
 - Anmerkungen / Änderungen: _____
 
-### B2 – CfP freigeben
-Dokument: `workstreams/programm/cfp-ausschreibung.md`
+### B2 – Speaker-Shortlist freigeben
+Dokument: `workstreams/programm/track-konzept.md`
 
-**CfP-Eckdaten:**
-- Veröffentlichung: 30. April 2026
-- Deadline: 15. Juni 2026
+**Speaker-Kuration:**
+- Einladungsformat: gezielt eingeladene Referentinnen und Referenten
+- Einladungsdatum: 30. April 2026
 - Formate: Vorträge, Workshops, Hackathon-Projekte, Lightning Talks
 
-- [ ] ✅ CfP-Text so freigegeben
-- [ ] ✅ CfP-Veröffentlichungsdatum (30.04.) bestätigt
+- [ ] ✅ Speaker-Shortlist und Einladungsprozess so freigegeben
+- [ ] ✅ Einladungsdatum (30.04.) bestätigt
 - Anmerkungen: _____
 
 ### B3 – Agenda-Entwurf freigeben
@@ -178,7 +178,7 @@ Sobald du die relevanten Punkte bestätigt hast, starten die Agenten automatisch
 | Schritt | Aktion | Agent | Wann |
 |---|---|---|---|
 | 1 | Venue-Anfragen versenden | Operations | Sofort |
-| 2 | CfP auf Website veröffentlichen | Kommunikation | 30.04.2026 |
+| 2 | Speaker-Einladungen versenden | Programm | 30.04.2026 |
 | 3 | Registrierungstool einrichten | Operations | April 2026 |
 | 4 | Sponsoring-Prospekt erstellen und versenden | Koordination | Mai 2026 |
 | 5 | Social-Media-Teaser veröffentlichen | Kommunikation | April 2026 |

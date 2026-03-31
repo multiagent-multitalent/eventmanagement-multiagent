@@ -95,7 +95,8 @@ programm_agent:
     Themen, renommierten Speakern und ansprechender Agenda.
   backstory: >
     Du bist spezialisiert auf wissenschaftliche Konferenzen und kennst die
-    AI-Forschungslandschaft. Du hast bereits mehrere CfP-Prozesse geleitet.
+    AI-Forschungslandschaft. Du hast bereits mehrere Events mit kuratierten
+    Speaker-Programmen erfolgreich umgesetzt.
 
 kommunikation_agent:
   role: "Kommunikations-Manager"
@@ -119,9 +120,9 @@ operations_agent:
 ### `config/tasks.yaml`
 
 ```yaml
-cfp_erstellen:
+speaker_kuration:
   description: >
-    Erstelle einen vollständigen Call for Papers (CfP) für {event_name}.
+    Erstelle ein Speaker-Konzept für {event_name}.
     
     Event-Details:
     - Datum: {date_start} bis {date_end}
@@ -130,14 +131,14 @@ cfp_erstellen:
     - Zielgruppe: {target_audience}
     - Sprachen: {languages}
     
-    Der CfP soll enthalten:
-    1. Event-Beschreibung
+    Das Speaker-Konzept soll enthalten:
+    1. Event-Beschreibung und Positionierung
     2. Themengebiete mit Beispielen
-    3. Einreichungsformat und -anforderungen
-    4. Wichtige Fristen (basierend auf Meilensteinen)
-    5. Kontaktinformationen
+    3. Speaker-Profile für jeden Track
+    4. Einladungs-E-Mail-Vorlage
+    5. Zeitplan für den Einladungsprozess
   expected_output: >
-    Ein vollständiger CfP als Markdown-Dokument, bereit für die Veröffentlichung.
+    Ein vollständiges Speaker-Konzept als Markdown-Dokument, bereit zur Nutzung.
   agent: programm_agent
 
 kommunikationsplan_erstellen:

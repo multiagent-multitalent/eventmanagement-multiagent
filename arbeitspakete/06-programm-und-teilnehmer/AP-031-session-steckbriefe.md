@@ -21,7 +21,7 @@ Für jede Session einen kompakten Steckbrief erstellen, der auf der Website, im 
 ## Eingaben (Inputs)
 - `workstreams/programm/agenda.md` – alle Sessions mit Zeitslots
 - `workstreams/programm/speaker-zusagen.md` – Speaker-Bios und Fotos
-- Einreichungs-Daten aus CfP-Plattform (Abstracts)
+- Speaker-Informationen (Bios, Abstracts) von Speakern erhalten
 
 ## Aufgaben (Checkliste)
 - [ ] Steckbrief-Template erstellen: Titel, Speaker (Name, Affiliation, Foto-URL), Abstract (max. 200 Wörter), Format, Track, Datum/Uhrzeit/Raum, Tags/Keywords

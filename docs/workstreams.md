@@ -29,15 +29,14 @@ Dieses Dokument beschreibt alle Arbeitsbereiche (Workstreams) und deren Verantwo
 
 **Aufgaben:**
 - Track-Konzept entwickeln (2–3 parallele Tracks)
-- CfP erstellen und verwalten
-- Einreichungen sichten und Programm kuratieren
+- Speaker-Profile identifizieren, einladen und kuratieren
 - Agenda erstellen (Slots, Räume, Pausen)
 - Speaker-Kommunikation
 - Session-Steckbriefe für Website
 
 **Abhängigkeiten:**
 - Venue (Räume, Technik) → beeinflusst Parallelität
-- Kommunikation (CfP-Veröffentlichung, Speaker-Kommunikation)
+- Kommunikation (Speaker-Ankündigung, Speaker-Kommunikation)
 - Technik (AV-Anforderungen pro Session)
 
 ---

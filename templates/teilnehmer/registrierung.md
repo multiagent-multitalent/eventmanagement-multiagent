@@ -23,7 +23,7 @@
 **Event-relevante Angaben**
 - Ernährungsbedürfnisse * (Checkbox: Keine / Vegetarisch / Vegan / Glutenfrei / Laktosefrei / Halal / Koscher / Sonstiges → Freitext)
 - Teilnahme Social Dinner? * (Ja / Nein / Vielleicht)
-- Wie haben Sie von uns erfahren? (Dropdown: Newsletter / Social Media / Kolleg:in / Hochschule / Presse / CfP / Sonstiges)
+- Wie haben Sie von uns erfahren? (Dropdown: Newsletter / Social Media / Kolleg:in / Hochschule / Presse / Sonstiges)
 
 **Optionale Felder**
 - LinkedIn-Profil (URL)

@@ -22,7 +22,7 @@
 
 | Workstream | Status | Agent | Artefakte | Nächster Schritt |
 |---|---|---|---|---|
-| Programm | 🟡 Konzept bereit | Programm | track-konzept.md, cfp-ausschreibung.md, agenda-entwurf.md | CfP-Veröffentlichung (30.04.) |
+| Programm | 🟡 Konzept bereit | Programm | track-konzept.md, speaker-konzept.md, agenda-entwurf.md | Speaker-Einladungen (April) |
 | Kommunikation | 🟡 Konzept bereit | Kommunikation | kommunikationsplan.md, social-media-kit.md | Social-Media-Accounts anlegen |
 | Teilnehmer | 🟡 Konzept bereit | Operations | registrierung-konzept.md | Registrierungstool auswählen |
 | Venue und Logistik | 🟡 Recherche bereit | Operations | venue-recherche.md | Anfragen bei Top-3-Venues |
@@ -41,7 +41,6 @@
 
 ### Programm
 - ✅ `workstreams/programm/track-konzept.md` – 3 Tracks mit Themen, Formaten, Speaker-Profilen
-- ✅ `workstreams/programm/cfp-ausschreibung.md` – CfP DE + EN (bereit zur Veröffentlichung)
 - ✅ `workstreams/programm/agenda-entwurf.md` – Tag-für-Tag-Agenda (3 Tage)
 
 ### Kommunikation
@@ -77,11 +76,11 @@
 | Meilenstein | Zieldatum | Status |
 |---|---|---|
 | Kick-off | 01.04.2026 | 🟡 Vorbereitung läuft |
-| CfP veröffentlicht | 30.04.2026 | 🟡 CfP-Text bereit (`cfp-ausschreibung.md`) |
+| Speaker-Einladungen versandt | 30.04.2026 | 🔴 Ausstehend |
 | Registrierung geöffnet | 01.05.2026 | 🔴 Tool noch nicht ausgewählt |
 | Venue gebucht | Mai 2026 | 🔴 Anfragen ausstehend (`venue-recherche.md`) |
 | Zwischenbericht | 31.05.2026 | 🔴 Ausstehend |
-| CfP-Deadline | 15.06.2026 | ⚪ Noch nicht relevant |
+| Speaker-Zusagen eingegangen | 15.06.2026 | ⚪ Noch nicht relevant |
 | 🏁 **PROJEKTABSCHLUSS & Abschlussbericht** | **30.06.2026** | ⚪ Ausstehend |
 | Programm finalisiert *(COAI)* | 31.07.2026 | ⚪ Post-Projekt |
 | Event *(COAI)* | 14.–16.10.2026 | ⚪ Post-Projekt |
@@ -96,7 +95,7 @@
 | Venue-Verfügbarkeit im Oktober (Messe-Saison!) | Hoch | Hoch | Sofort anfragen – Oktober ist Hochsaison | 🔴 Kritisch |
 | Team-Rollen noch nicht besetzt | Hoch | Mittel | Im Kick-off (01.04.) klären | 🟡 Geplant |
 | Budget-Freigabe ausstehend | Mittel | Hoch | Budget-Rahmen bestätigen lassen | 🟡 Konzept bereit |
-| CfP-Tool und Website fehlen noch | Mittel | Mittel | Bis April umsetzen | 🟡 Konzept bereit |
+| Website und Registrierungstool fehlen noch | Mittel | Mittel | Bis April umsetzen | 🟡 Konzept bereit |
 
 ---
 
@@ -106,7 +105,7 @@
 - [ ] Venue-Auswahl treffen (nach Besichtigungen)
 - [ ] Budget-Rahmen genehmigen (`workstreams/sponsoring/budget-rahmen.md`)
 - [ ] Track-Konzept bestätigen (`workstreams/programm/track-konzept.md`)
-- [ ] CfP freigeben (`workstreams/programm/cfp-ausschreibung.md`)
+- [ ] Speaker-Shortlist freigeben und Einladungen versenden
 - [ ] Registrierungstool auswählen
 - [ ] Ticketpreise final festlegen
 - [ ] Streaming: ja oder nein?
@@ -129,6 +128,6 @@
 | 🔴 Sofort | Team-Rollen besetzen (`config/team.yaml`) | Projektleitung | Kick-off |
 | 🔴 Sofort | Keynote-Speaker anfragen (mind. 6 Monate vor Event!) | Programm | April 2026 |
 | 🟡 Diese Woche | `CONFIRM.md` durchgehen und bestätigen | Projektleitung | April 2026 |
-| 🟡 April | CfP-Website und Registrierungstool einrichten | Operations | 30.04.2026 |
+| 🟡 April | Registrierungstool einrichten und Website aufsetzen | Operations | 30.04.2026 |
 | 🟡 April | Sponsoring-Ansprache starten | Koordination | Mai 2026 |
 | 🟡 Juni | Übergabedokumentation für COAI-Team vorbereiten | Dokumentation | **30.06.2026** |

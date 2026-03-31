@@ -37,21 +37,21 @@ Der Kommunikationsplan strukturiert alle Kommunikationsmaßnahmen von der ersten
 
 ---
 
-### Phase 2: CfP-Ankündigung (Ende April – Mitte Juni 2026)
+### Phase 2: Speaker-Ankündigung & Registrierung (Ende April – Mitte Juni 2026)
 
-**Ziel:** Qualitativ hochwertige Einreichungen gewinnen
+**Ziel:** Interesse und Registrierungen gewinnen, Speaker-Einladungen kommunizieren
 
 | Datum | Kanal | Aktion | Inhalt |
 |---|---|---|---|
-| 30.04.2026 | LinkedIn, Twitter/X | Post | CfP ist live! Link teilen |
-| 30.04.2026 | Newsletter | E-Mail | CfP-Ankündigung mit allen Details |
-| 30.04.2026 | Presse | Pressemitteilung | „COAI gGmbH öffnet CfP für AITD 2026" |
+| 30.04.2026 | LinkedIn, Twitter/X | Post | Speaker-Einladungen versandt – erste Highlights ankündigen |
+| 30.04.2026 | Newsletter | E-Mail | Event-Ankündigung mit Programm-Vorschau |
+| 30.04.2026 | Presse | Pressemitteilung | „COAI gGmbH gibt erste Programm-Highlights für AITD 2026 bekannt" |
 | 07.05.2026 | LinkedIn | Post | Track-Vorstellung: Track 1 – AI Transparency |
 | 14.05.2026 | LinkedIn | Post | Track-Vorstellung: Track 2 – AI Safety & Governance |
 | 21.05.2026 | LinkedIn | Post | Track-Vorstellung: Track 3 – AI in Practice |
-| 28.05.2026 | Newsletter | E-Mail | Reminder: CfP noch 3 Wochen offen |
-| 04.06.2026 | Twitter/X, LinkedIn | Post | Countdown: noch 11 Tage bis CfP-Deadline |
-| 10.06.2026 | Twitter/X, LinkedIn | Post | Letzte Reminder: noch 5 Tage! |
+| 28.05.2026 | Newsletter | E-Mail | Reminder: Registrierung läuft – Early Bird noch verfügbar |
+| 04.06.2026 | Twitter/X, LinkedIn | Post | Speaker-Spotlight: Keynote-Vorschau |
+| 10.06.2026 | Twitter/X, LinkedIn | Post | Letzte Erinnerung: Early Bird endet bald! |
 
 ---
 
@@ -62,8 +62,8 @@ Der Kommunikationsplan strukturiert alle Kommunikationsmaßnahmen von der ersten
 | Datum | Kanal | Aktion | Inhalt |
 |---|---|---|---|
 | 01.05.2026 | LinkedIn, Newsletter | Post/E-Mail | Registrierung ist geöffnet! Early Bird bis 30. Juni |
-| 15.06.2026 | Newsletter | E-Mail | Erinnerung: CfP-Deadline + Registrierung läuft |
-| 15.07.2026 | Newsletter | E-Mail | Speaker-Benachrichtigungen raus + Danke für Einreichungen |
+| 15.06.2026 | Newsletter | E-Mail | Registrierungs-Update: Aktueller Stand + Anreize |
+| 15.07.2026 | Newsletter | E-Mail | Programm-Vorschau: Das erwartet euch! |
 | 31.07.2026 | LinkedIn, Twitter/X | Post | Programm ist veröffentlicht! Highlights ankündigen |
 | 31.07.2026 | Newsletter | E-Mail | Programm-Newsletter: Diese Sessions kommen! |
 | 31.07.2026 | Presse | Pressemitteilung | AITD-2026-Programm veröffentlicht |

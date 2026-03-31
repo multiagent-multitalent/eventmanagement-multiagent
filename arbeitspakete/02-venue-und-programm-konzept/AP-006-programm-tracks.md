@@ -12,7 +12,7 @@
 | **Status** | ⬜ Offen |
 
 ## Ziel
-Die 3 inhaltlichen Programm-Tracks der AITD 2026 konzipieren und mit Themen, Zielgruppen und Sessionformaten beschreiben – als Grundlage für den CfP-Text (AP-010) und die spätere Agenda (AP-028).
+Die 3 inhaltlichen Programm-Tracks der AITD 2026 konzipieren und mit Themen, Zielgruppen und Sessionformaten beschreiben – als Grundlage für die Speaker-Kuration und die spätere Agenda (AP-028).
 
 ## Voraussetzungen (Abhängigkeiten)
 - AP-001: Event-Konzept finalisieren

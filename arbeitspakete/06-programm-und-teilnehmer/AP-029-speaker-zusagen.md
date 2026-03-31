@@ -15,10 +15,10 @@
 Alle akzeptierten Speaker über ihre Annahme informieren, abgelehnte Einreichende benachrichtigen und verbindliche Zusagen von allen Keynote-Speakern und Session-Referierenden einholen.
 
 ## Voraussetzungen (Abhängigkeiten)
-- AP-027: CfP-Einreichungen sichten und bewerten
+- AP-006: Programm-Tracks konzipieren (Speaker-Shortlist bekannt)
 
 ## Eingaben (Inputs)
-- `workstreams/programm/cfp-entscheidungen.md` – Liste akzeptierter/abgelehnter Einreichungen
+- `workstreams/programm/speaker-shortlist.md` – Liste eingeladener Speaker
 - `config/event.yaml` – Event-Daten für Kommunikation
 
 ## Aufgaben (Checkliste)

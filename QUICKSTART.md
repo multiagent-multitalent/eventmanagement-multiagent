@@ -38,7 +38,7 @@ Der Orchestrator übernimmt automatisch:
 | Phase | Was passiert | Wer macht es |
 |---|---|---|
 | 🚀 Initialisierung | Event-Konzept, Team-Setup, Meilensteine | Orchestrator |
-| 📋 Planung | Venue-Konzept, CfP, Budget-Rahmen, Kommunikationsplan | Alle 5 Agenten |
+| 📋 Planung | Venue-Konzept, Speaker-Kuration, Budget-Rahmen, Kommunikationsplan | Alle 5 Agenten |
 | ⚙️ Umsetzung | Alle Planungsartefakte generieren | Alle 5 Agenten |
 | 🎯 Finalisierung | Dashboard aktualisieren, Bestätigung vorbereiten | Koordination |
 
@@ -62,7 +62,6 @@ Nach dem Start erstellt der Orchestrator automatisch alle Planungsartefakte:
 
 ### Programm
 - `workstreams/programm/track-konzept.md` – Detailliertes Track-Konzept mit 3 parallelen Tracks
-- `workstreams/programm/cfp-ausschreibung.md` – Call for Papers (DE + EN)
 - `workstreams/programm/agenda-entwurf.md` – Vorläufige Tagesagenda
 
 ### Kommunikation

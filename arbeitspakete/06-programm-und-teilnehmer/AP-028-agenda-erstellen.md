@@ -15,11 +15,11 @@
 Eine vollständige, finale Agenda für alle 3 Event-Tage erstellen, die Räume, Zeitslots und Session-Zuordnungen enthält und zur Veröffentlichung auf der Website bereit ist.
 
 ## Voraussetzungen (Abhängigkeiten)
-- AP-027: CfP-Einreichungen sichten und bewerten (Akzeptierte Sessions bekannt)
+- AP-029: Speaker-Zusagen einholen (bestätigte Sessions bekannt)
 - AP-020: Raumplanung erstellen (Räume und Kapazitäten bekannt)
 
 ## Eingaben (Inputs)
-- `workstreams/programm/cfp-entscheidungen.md` – akzeptierte Sessions mit Formaten
+- `workstreams/programm/speaker-zusagen.md` – bestätigte Sessions mit Formaten
 - `workstreams/venue-logistik/raumplanung.md` – verfügbare Räume und Kapazitäten
 - `workstreams/programm/programm-tracks.md` – Track-Struktur und Zeitgerüst
 

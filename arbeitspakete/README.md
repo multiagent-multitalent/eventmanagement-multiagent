@@ -21,13 +21,11 @@ Block 01 – Initialisierung
 Block 02 – Venue & Programm-Konzept
 ├── AP-005 Venue-Anforderungen    ← abhängig von AP-001, AP-002
 ├── AP-006 Programm-Tracks        ← abhängig von AP-001
-├── AP-007 CfP-Bewertungsrubrik   ← abhängig von AP-006
 └── AP-008 Registrierung-Konzept  ← abhängig von AP-001
          │
          ▼
 Block 03 – Recherche & Ausschreibung
 ├── AP-009 Venue-Recherche        ← abhängig von AP-005
-├── AP-010 CfP-Text               ← abhängig von AP-006, AP-007
 ├── AP-011 Technik-Anforderungen  ← abhängig von AP-005, AP-006
 ├── AP-012 Hotel-Recherche        ← abhängig von AP-001
 ├── AP-013 Sponsoren-Recherche    ← abhängig von AP-003
@@ -36,8 +34,7 @@ Block 03 – Recherche & Ausschreibung
          ▼
 Block 04 – Buchungen & Veröffentlichung
 ├── AP-015 Venue-Buchung          ← abhängig von AP-009
-├── AP-016 CfP-Veröffentlichung   ← abhängig von AP-010
-├── AP-017 Website-Launch         ← abhängig von AP-004, AP-008, AP-010
+├── AP-017 Website-Launch         ← abhängig von AP-004, AP-008
 ├── AP-018 Kommunikationsplan     ← abhängig von AP-004
 └── AP-019 Content-Kalender       ← abhängig von AP-018
          │
@@ -53,9 +50,8 @@ Block 05 – Umsetzung nach Venue-Buchung
          │
          ▼
 Block 06 – Programm & Teilnehmer
-├── AP-027 CfP-Einreichungen sichten ← abhängig von AP-016 + CfP-Deadline
-├── AP-028 Agenda erstellen        ← abhängig von AP-027, AP-020
-├── AP-029 Speaker-Zusagen         ← abhängig von AP-027
+├── AP-028 Agenda erstellen        ← abhängig von AP-029, AP-020
+├── AP-029 Speaker-Zusagen         ← abhängig von AP-006
 ├── AP-030 Speaker-Briefings       ← abhängig von AP-028, AP-029
 ├── AP-031 Session-Steckbriefe     ← abhängig von AP-028, AP-030
 └── AP-032 Badge-Design            ← abhängig von AP-024
@@ -104,7 +100,7 @@ Block 10 – Nachbereitung (COAI)
 | **03** | Recherche & Ausschreibung | Apr–Mai 2026 | AP-009–014 | Studierendenteam |
 | **04** | Buchungen & Veröffentlichung | Mai 2026 (ab 01.05.) | AP-015–019 | Studierendenteam |
 | **05** | Umsetzung nach Venue-Buchung | Mai–Jun 2026 | AP-020–026 | Studierendenteam |
-| **06** | Programm & Teilnehmer | Jun 2026 (nach CfP-Deadline) | AP-027–032 | Studierendenteam |
+| **06** | Programm & Teilnehmer | Jun 2026 (nach Speaker-Zusagen) | AP-028–032 | Studierendenteam |
 | **07** | Personal & Abschluss | Jun 2026 (letzte 2 Wochen) | AP-033–038 | Studierendenteam |
 | **08** | Übergabe | bis 30.06.2026 | AP-039–042 | Studierendenteam |
 | **09** | Event-Durchführung | 13.–16. Okt 2026 | AP-043–047 | **COAI** |

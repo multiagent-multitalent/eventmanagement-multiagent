@@ -29,7 +29,7 @@ Einen professionellen Abschlussbericht über die Planungsarbeit des Studierenden
 - [ ] Abschlussbericht-Struktur festlegen: Executive Summary, Projektziele und -ergebnis, Übersicht aller Arbeitspakete, erreichte Meilensteine, Budget-Ist-Stand, offene Punkte, Empfehlungen für COAI
 - [ ] Executive Summary (1 Seite) verfassen: Was wurde erreicht? Was bleibt offen?
 - [ ] Alle 52 APs mit Status (abgeschlossen/offen) auflisten
-- [ ] Meilenstein-Erreichung dokumentieren (CfP gestartet? Venue gebucht? etc.)
+- [ ] Meilenstein-Erreichung dokumentieren (Speaker-Einladungen versandt? Venue gebucht? etc.)
 - [ ] Budget-Ist-Stand dokumentieren (was wurde bereits ausgegeben/gebunden)
 - [ ] Lessons Learned aus dem Planungsprozess als Empfehlungen formulieren
 - [ ] Risiken für den weiteren Verlauf identifizieren und dokumentieren

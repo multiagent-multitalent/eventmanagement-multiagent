@@ -19,7 +19,7 @@ Drei Tage voller Vorträge, Workshops und einem Hackathon rund um:
 
 Veranstaltet von @COAI gGmbH – Gemeinnütziges Forschungsinstitut für Human Compatible AI
 
-Details und CfP folgen. Stay tuned! 👇
+Details und Programm-Highlights folgen. Stay tuned! 👇
 
 #AITD2026 #AITransparency #HumanCompatibleAI #AIGovernance #Nuremberg
 ```
@@ -36,7 +36,7 @@ AITD 2026 is coming! Join us October 14–16, 2026 in Nuremberg, Germany for thr
 
 Organized by @COAI gGmbH – Non-profit Research Institute for Human Compatible AI
 
-Full program and Call for Papers coming soon. Stay tuned!
+Full program coming soon. Stay tuned!
 
 #AITD2026 #AITransparency #HumanCompatibleAI #AIGovernance #Nuremberg
 ```
@@ -47,53 +47,53 @@ Full program and Call for Papers coming soon. Stay tuned!
 
 October 14–16 in Nuremberg! 3 days of AI Transparency, Safety & Governance – talks, workshops, hackathon.
 
-By @COAI_Research. CfP coming soon! 🔗
+By @COAI_Research. Programm und Registrierung folgen! 🔗
 
 #AITransparency #HumanCompatibleAI
 ```
 
 ---
 
-## CfP-Ankündigung Posts
+## Speaker-Ankündigung Posts
 
 ### LinkedIn (DE)
 ```
-📢 Call for Papers ist geöffnet: AI Transparency Days 2026!
+📢 Erste Speaker-Highlights: AI Transparency Days 2026!
 
-Hast du Forschungsergebnisse, praktische Erfahrungen oder Projekt-Demos rund um KI-Transparenz, KI-Sicherheit oder KI-Governance? Dann reiche jetzt ein!
+Das Programm nimmt Form an! Die AITD 2026 bringt führende Expert:innen zu KI-Transparenz, KI-Sicherheit und KI-Governance zusammen.
 
-🗓️ Einreichungsfrist: 15. Juni 2026
-📍 Event: 14.–16. Oktober 2026 in Nürnberg
+🗓️ Event: 14.–16. Oktober 2026 in Nürnberg
+📍 Venue: wird bekannt gegeben
 
-Wir suchen:
-▶️ Vorträge (20+10 Min.)
-🛠️ Workshops (90 Min.)
-⚡ Lightning Talks (5 Min.)
-💻 Hackathon-Projekte
+Seid dabei:
+▶️ Vorträge und Keynotes
+🛠️ Workshops
+⚡ Lightning Talks
+💻 Hackathon
 
-👉 Jetzt einreichen: [Link]
+👉 Registrierung öffnet bald: [Link]
 
-#AITD2026 #CfP #AIResearch #AITransparency #CallForPapers
+#AITD2026 #AIResearch #AITransparency #AIGovernance
 ```
 
 ### LinkedIn (EN)
 ```
-📢 Call for Papers is open: AI Transparency Days 2026!
+📢 First speaker highlights: AI Transparency Days 2026!
 
-Do you have research results, practical experience, or project demos on AI transparency, safety, or governance? Submit now!
+The program is taking shape! AITD 2026 brings together leading experts in AI transparency, safety, and governance.
 
-🗓️ Submission deadline: June 15, 2026
-📍 Event: October 14–16, 2026 in Nuremberg, Germany
+🗓️ Event: October 14–16, 2026 in Nuremberg, Germany
+📍 Venue: to be announced
 
-We welcome:
-▶️ Talks (20+10 min.)
-🛠️ Workshops (90 min.)
-⚡ Lightning Talks (5 min.)
-💻 Hackathon projects
+Join us for:
+▶️ Talks and keynotes
+🛠️ Workshops
+⚡ Lightning Talks
+💻 Hackathon
 
-👉 Submit now: [Link]
+👉 Registration opens soon: [Link]
 
-#AITD2026 #CfP #AIResearch #AITransparency #CallForPapers
+#AITD2026 #AIResearch #AITransparency #AIGovernance
 ```
 
 ---
@@ -113,7 +113,7 @@ Track 1 der #AITD2026 widmet sich technischen und methodischen Ansätzen für er
 ▪️ Model Cards & KI-Dokumentation
 ▪️ Audit-Methoden und Open-Source-Tools
 
-📝 CfP läuft noch bis 15. Juni: [Link]
+📝 Registrierung läuft: [Link]
 
 #AITransparency #XAI #ExplainableAI #AITD2026
 ```
@@ -131,7 +131,7 @@ Track 2 der #AITD2026 bringt Regulierer, Rechtswissenschaftler und Governance-Ex
 ▪️ ISO/IEC 42001 & NIST AI RMF
 ▪️ Responsible AI in Unternehmen
 
-📝 CfP bis 15. Juni: [Link]
+📝 Registrierung: [Link]
 
 #AISafety #AIGovernance #EUAIAct #ResponsibleAI #AITD2026
 ```
@@ -149,7 +149,7 @@ Track 3 der #AITD2026 zeigt KI-Transparenz im echten Einsatz:
 ▪️ Startup-Showcase
 ▪️ Lessons Learned aus echten Projekten
 
-📝 Lightning Talks & Workshops willkommen! CfP bis 15. Juni: [Link]
+📝 Lightning Talks & Workshops willkommen! Registrierung: [Link]
 
 #AIinPractice #HumanInTheLoop #AIStartups #AITD2026
 ```

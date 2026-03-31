@@ -39,7 +39,7 @@ Das Registrierungssystem muss ca. 125 Teilnehmer in verschiedenen Kategorien ver
 ### Event-relevante Angaben
 - Ernährungsbedürfnisse: Keine Einschränkung / Vegetarisch / Vegan / Glutenfrei / Laktosefrei / Halal / Koscher / Sonstiges (Freitext)
 - Teilnahme Social Dinner (Tag 1)?: Ja / Nein / Vielleicht
-- Wie haben Sie von AITD 2026 erfahren?: CfP / Newsletter / Social Media / Kolleg:in / Hochschule / Sonstiges
+- Wie haben Sie von AITD 2026 erfahren?: Newsletter / Social Media / Kolleg:in / Hochschule / Sonstiges
 
 ### Optional
 - LinkedIn-Profil (für Networking)

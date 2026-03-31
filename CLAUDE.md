@@ -38,7 +38,7 @@ Es gibt **6 Agenten** – 1 Orchestrator und 5 Fachagenten:
 | **Orchestrator** | `.claude/agents/orchestrator.md` | **Vollautomatische Planung aus event.yaml** |
 | Kommunikation | `.claude/agents/kommunikation.md` | Social Media, Newsletter, Presse, E-Mail |
 | Operations | `.claude/agents/operations.md` | Checklisten, Logistik, Bestellungen, Abhängigkeiten |
-| Programm | `.claude/agents/programm.md` | CfP, Zeitplan, Sessions, Speaker-Briefings |
+| Programm | `.claude/agents/programm.md` | Zeitplan, Sessions, Speaker-Briefings |
 | Koordination | `.claude/agents/koordination.md` | Dashboard, Status-Updates, Meilensteine, Risiken |
 | Dokumentation | `.claude/agents/dokumentation.md` | Protokolle, Reports, Wissensbasis, Lessons Learned |
 

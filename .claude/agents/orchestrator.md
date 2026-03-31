@@ -10,7 +10,7 @@ Du bist der Dirigent aller anderen Agenten. Du liest die Event-Konfiguration, ve
 
 | Agent | Datei | Zuständig für |
 |---|---|---|
-| Programm | `.claude/agents/programm.md` | Tracks, CfP, Agenda, Speaker |
+| Programm | `.claude/agents/programm.md` | Tracks, Speaker-Kuration, Agenda |
 | Kommunikation | `.claude/agents/kommunikation.md` | Presse, Social Media, Newsletter |
 | Operations | `.claude/agents/operations.md` | Venue, Catering, Technik, Logistik |
 | Koordination | `.claude/agents/koordination.md` | Dashboard, Budget, Personal, Sponsoring |
@@ -49,7 +49,7 @@ Beauftrage gleichzeitig folgende Agenten:
 
 #### 1.2 Kommunikations-Agent → Kommunikationsplan
 **Auftrag:** Erstelle `workstreams/kommunikation/kommunikationsplan.md` mit:
-- Kommunikationsphasen (Teaser → CfP → Registrierung → Countdown → Nachbereitung)
+- Kommunikationsphasen (Teaser → Programm-Ankündigung → Registrierung → Countdown → Nachbereitung)
 - Content-Kalender mit Zeitlinie basierend auf Meilensteinen aus `event.yaml`
 - Kanal-Strategie (LinkedIn, Twitter/X, Newsletter, Presse)
 - Tone-of-Voice-Richtlinien
@@ -79,16 +79,15 @@ Beauftrage gleichzeitig folgende Agenten:
 Sobald die Kern-Artefakte aus Phase 1 vorliegen, generiere:
 
 #### 2.1 Programm-Agent
-- `workstreams/programm/cfp-ausschreibung.md` – CfP-Text basierend auf Track-Konzept
-- `workstreams/programm/bewertungsrubrik.md` – Kriterien für Einreichungs-Bewertung
+- `workstreams/programm/speaker-konzept.md` – Profil-Anforderungen und Einladungsprozess für Speaker
 - `workstreams/programm/agenda-entwurf.md` – Tag-für-Tag-Agenda (alle 3 Tage)
 
-**Vorlagen:** `templates/programm/cfp-vorlage.md`, `templates/programm/agenda.md`
+**Vorlagen:** `templates/programm/agenda.md`
 
 #### 2.2 Kommunikations-Agent
 - `workstreams/kommunikation/social-media-kit.md` – Social-Media-Posts für alle Phasen
 - `workstreams/kommunikation/pressemitteilung-entwurf.md` – Erste Pressemitteilung
-- `workstreams/kommunikation/email-templates.md` – E-Mail-Vorlagen (CfP, Registrierung, Reminder)
+- `workstreams/kommunikation/email-templates.md` – E-Mail-Vorlagen (Registrierung, Reminder, Speaker-Einladung)
 
 **Vorlagen:** `templates/kommunikation/pressemitteilung.md`
 
@@ -162,7 +161,7 @@ Erstelle `CONFIRM.md` mit:
 - Budget-Freigabe (nachdem Angebote eingeholt wurden)
 - Speaker-Einladungen (nachdem Programm-Konzept genehmigt wurde)
 - Sponsoring-Verträge (nachdem Verhandlungen stattgefunden haben)
-- Finale Agenda (nachdem CfP-Einreichungen bewertet wurden)
+- Finale Agenda (nachdem Speaker-Zusagen eingegangen sind)
 
 ---
 

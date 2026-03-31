@@ -9,8 +9,8 @@
 | Phase | Zeitraum | Hauptbotschaft |
 |---|---|---|
 | Teaser | April 2026 | „Save the Date" |
-| Ankündigung | April 2026 | Event-Launch, CfP |
-| CfP-Phase | April–Juni 2026 | Einreichungen gewinnen |
+| Ankündigung | April 2026 | Event-Launch, Speaker-Ankündigung |
+| Speaker-Phase | April–Juni 2026 | Programm-Highlights, Registrierungen gewinnen |
 | Registrierung | Mai–September 2026 | Tickets kaufen |
 | Countdown | September–Oktober 2026 | Vorfreude, letzte Infos |
 | Live | Oktober 2026 | Live-Updates |
@@ -24,7 +24,7 @@
 |---|---|---|---|---|---|
 | [Datum] | LinkedIn | Post | Save the Date | TBD | ⚪ Offen |
 | [Datum] | Twitter/X | Post | Save the Date | TBD | ⚪ Offen |
-| [Datum] | Newsletter | E-Mail | CfP-Ankündigung | TBD | ⚪ Offen |
+| [Datum] | Newsletter | E-Mail | Event-Ankündigung | TBD | ⚪ Offen |
 | [Datum] | Presse | Pressemitteilung | Event-Launch | TBD | ⚪ Offen |
 | [Datum] | Website | Update | Programm veröffentlicht | TBD | ⚪ Offen |
 

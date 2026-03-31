@@ -93,9 +93,9 @@
 
 - [ ] Finale Veranstaltungsorte (abhängig von Venue-Buchung)
 - [ ] Keynote-Speaker (nach Programm-Freigabe anfragen)
-- [ ] Parallele vs. sequenzielle Workshops (abhängig von Einreichungen)
+- [ ] Parallele vs. sequenzielle Workshops (abhängig von Speaker-Zusagen)
 - [ ] Streaming: welche Sessions werden aufgezeichnet?
 
 ---
 
-*Nächster Schritt: Nach CfP-Einreichungen Agenda finalisieren. Speaker-Briefings versenden → `templates/programm/speaker-briefing.md`*
+*Nächster Schritt: Nach Speaker-Zusagen Agenda finalisieren. Speaker-Briefings versenden → `templates/programm/speaker-briefing.md`*

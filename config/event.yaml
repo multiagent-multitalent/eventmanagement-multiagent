@@ -67,9 +67,8 @@ milestones:
   kickoff: "2026-04-01"        # Anfang April 2026
   interim_report: "2026-05-31" # Mitte/Ende Mai 2026
   final_report: "2026-06-30"   # Ende Juni 2026
-  cfp_open: "2026-04-30"       # Ende April 2026 (Vorschlag)
-  cfp_deadline: "2026-06-15"   # Mitte Juni 2026 (Vorschlag)
-  program_final: "2026-07-31"  # Ende Juli 2026 (Vorschlag)
+  speaker_invitation: "2026-04-30"  # Ende April 2026 (Vorschlag)
+  program_final: "2026-07-31"       # Ende Juli 2026 (Vorschlag)
   registration_open: "2026-05-01" # Anfang Mai 2026 (Vorschlag)
   event_start: "2026-10-14"
   event_end: "2026-10-16"

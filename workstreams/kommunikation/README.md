@@ -18,7 +18,7 @@
 - [ ] Social-Media-Kanäle einrichten/prüfen
 
 ### Phase 3 – Umsetzung
-- [ ] CfP-Ankündigung veröffentlichen
+- [ ] Speaker-Ankündigungen veröffentlichen
 - [ ] Event-Ankündigung veröffentlichen
 - [ ] Laufende Social-Media-Beiträge
 - [ ] Newsletter-Kampagnen

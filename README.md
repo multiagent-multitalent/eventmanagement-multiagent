@@ -36,7 +36,7 @@ eventmanagement-multiagent/
 │   ├── workstreams.md
 │   └── rollen.md
 ├── templates/                       # Artefakt-Vorlagen für alle Phasen
-│   ├── programm/                    # CfP, Agenda, Speaker-Briefing
+│   ├── programm/                    # Agenda, Speaker-Kuration, Speaker-Briefing
 │   ├── kommunikation/               # Content-Kalender, Pressemitteilung
 │   ├── venue-logistik/              # Venue-Anforderungen
 │   ├── nachbereitung/               # Protokoll, Feedback-Survey

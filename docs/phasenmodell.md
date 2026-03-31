@@ -29,12 +29,12 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ## Phase 2: Planung & Kernumsetzung (28. April – 31. Mai 2026 | KW 18–22)
 
-**Ziel:** Venue gebucht, CfP live, Registrierung offen, Zwischenbericht abgegeben.
+**Ziel:** Venue gebucht, Speaker-Einladungen versandt, Registrierung offen, Zwischenbericht abgegeben.
 
 ### Aufgaben
 - Venue recherchieren, besichtigen und buchen
 - Programm-Konzept entwickeln (Tracks, Formate)
-- CfP-Ausschreibung erstellen und veröffentlichen
+- Speaker-Profile identifizieren und Einladungen versenden
 - Kommunikationsplan und Content-Kalender erstellen
 - Website-Launch vorbereiten
 - Sponsoring-Konzept entwickeln
@@ -43,7 +43,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 ### Artefakte
 - [ ] Venue-Recherche und -Entscheidung
 - [ ] Programm-Konzept
-- [ ] CfP-Ausschreibung (DE + EN)
+- [ ] Speaker-Shortlist und Einladungsstatus
 - [ ] Kommunikationsplan
 - [ ] Content-Kalender
 - [ ] Sponsoring-Konzept
@@ -53,10 +53,10 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ## Phase 3: Abschluss & Übergabe (01.–30. Juni 2026 | KW 23–26)
 
-**Ziel:** CfP-Deadline, alle Verträge unterzeichnet, vollständige Übergabedokumentation, Abschlussbericht. **Endet am 30.06.2026.**
+**Ziel:** Speaker-Zusagen eingegangen, alle Verträge unterzeichnet, vollständige Übergabedokumentation, Abschlussbericht. **Endet am 30.06.2026.**
 
 ### Aufgaben
-- Einreichungen sichten und Review-Prozess an COAI übergeben
+- Speaker-Zusagen einholen und an COAI übergeben
 - Alle Verträge bis Projektende unterzeichnen (Catering, Sponsoring, Hotel)
 - Speaker-Bestätigungen dokumentieren und übergeben
 - Übergabedokumentation für alle Workstreams erstellen
@@ -131,11 +131,11 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 |---|---|---|
 | Kick-off | 01.04.2026 | Projektteam |
 | Konzept finalisiert | Mitte April 2026 | Projektteam |
-| CfP veröffentlicht | 30.04.2026 | Projektteam |
+| Speaker-Einladungen versandt | 30.04.2026 | Projektteam |
 | Registrierung geöffnet | 01.05.2026 | Projektteam |
 | Venue gebucht | Mai 2026 | Projektteam |
 | Zwischenbericht | 31.05.2026 | Projektteam |
-| CfP-Deadline | 15.06.2026 | Projektteam |
+| Speaker-Zusagen eingegangen | 15.06.2026 | Projektteam |
 | 🏁 **PROJEKTABSCHLUSS & Abschlussbericht** | **30.06.2026** | **Projektteam** |
 | Programm finalisiert | 31.07.2026 | COAI-Team |
 | Event | 14.–16. Oktober 2026 | COAI-Team |

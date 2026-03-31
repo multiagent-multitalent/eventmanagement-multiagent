@@ -12,13 +12,13 @@ Es dient als Grundlage für die Erstellung von Issues im GitHub-Projekt.
 | 1 | Repository- und Agenten-Setup | Übergreifend | Phase 1 | 🔴 Hoch |
 | 2 | Event-Konzept und Konfiguration | Übergreifend | Phase 1 | 🔴 Hoch |
 | 3 | Venue-Recherche und -Buchung | Venue & Logistik | Phase 2 | 🔴 Hoch |
-| 4 | Track-Konzept und CfP | Programm | Phase 2 | 🔴 Hoch |
+| 4 | Track-Konzept und Speaker-Kuration | Programm | Phase 2 | 🔴 Hoch |
 | 5 | Kommunikationsplan und Content-Kalender | Kommunikation | Phase 2 | 🔴 Hoch |
 | 6 | Budget-Rahmen und Sponsoring-Konzept | Sponsoring | Phase 2 | 🔴 Hoch |
 | 7 | Registrierungssystem einrichten | Teilnehmer | Phase 2/3 | 🟡 Mittel |
 | 8 | Technik-Anforderungen und -Beschaffung | Technik | Phase 2/3 | 🟡 Mittel |
 | 9 | Catering-Konzept und -Beauftragung | Catering | Phase 2/3 | 🟡 Mittel |
-| 10 | Einreichungen sichten und Programm finalisieren | Programm | Phase 3 | 🔴 Hoch |
+| 10 | Speaker-Zusagen einholen und Programm finalisieren | Programm | Phase 3 | 🔴 Hoch |
 | 11 | Speaker-Management | Programm | Phase 3 | 🔴 Hoch |
 | 12 | Social-Media- und Newsletter-Kampagnen | Kommunikation | Phase 3 | 🟡 Mittel |
 | 13 | Helfer-Rekrutierung und Schichtplanung | Personal | Phase 3 | 🟡 Mittel |
@@ -113,27 +113,26 @@ Die Venue ist eine der kritischsten Entscheidungen – sie beeinflusst fast alle
 
 ---
 
-### Issue 4: Track-Konzept und Call for Proposals
+### Issue 4: Track-Konzept und Speaker-Kuration
 
-**Titel:** Programm-Konzept entwickeln und CfP starten
+**Titel:** Programm-Konzept entwickeln und Speaker einladen
 
 **Phase:** Phase 2 – Planung  
 **Priorität:** 🔴 Hoch  
 **Agent:** Programm
 
 **Beschreibung:**
-Das Programm ist das Herzstück des Events. Der CfP muss früh gestartet werden, damit genug Zeit für Einreichungen und Kuratierung bleibt.
+Das Programm ist das Herzstück des Events. Da die AI Transparency Days keinen Call for Papers haben, werden Speaker gezielt eingeladen und kuratiert.
 
 **Aufgaben:**
 - [ ] Track-Konzept entwickeln (Themen, Formate, Zielgruppen)
 - [ ] Keynote-Themen und mögliche Keynote-Speaker identifizieren
-- [ ] CfP-Text erstellen (DE + EN) – Vorlage: `templates/programm/cfp-vorlage.md`
-- [ ] Bewertungsrubrik für Einreichungen entwickeln
-- [ ] CfP-Plattform wählen und einrichten
-- [ ] CfP veröffentlichen
-- [ ] CfP verbreiten (Koord. mit Kommunikation)
+- [ ] Speaker-Shortlist pro Track erstellen
+- [ ] Einladungs-E-Mails vorbereiten (DE + EN)
+- [ ] Speaker-Einladungen versenden
+- [ ] Speaker-Zusagen verfolgen und dokumentieren
 
-**Deadline:** CfP-Veröffentlichung Ende April 2026
+**Deadline:** Speaker-Einladungen Ende April 2026
 
 **Ressourcen:** `workstreams/programm/`, `templates/programm/`
 
@@ -148,7 +147,7 @@ Das Programm ist das Herzstück des Events. Der CfP muss früh gestartet werden,
 **Agent:** Kommunikation
 
 **Beschreibung:**
-Ohne strukturierte Kommunikation werden Event-Ankündigungen und CfP zu wenig Menschen erreichen. Früh planen, früh starten.
+Ohne strukturierte Kommunikation werden Event-Ankündigungen zu wenig Menschen erreichen. Früh planen, früh starten.
 
 **Aufgaben:**
 - [ ] Kommunikationsstrategie und Kernbotschaften definieren
@@ -156,7 +155,7 @@ Ohne strukturierte Kommunikation werden Event-Ankündigungen und CfP zu wenig Me
 - [ ] Kommunikationsplan erstellen
 - [ ] Content-Kalender aufbauen (Vorlage: `templates/kommunikation/content-kalender.md`)
 - [ ] Social-Media-Kanäle prüfen und ggf. einrichten
-- [ ] Erste Inhalte erstellen: Save-the-Date-Posts, CfP-Ankündigung
+- [ ] Erste Inhalte erstellen: Save-the-Date-Posts, Event-Ankündigung
 
 **Ressourcen:** `workstreams/kommunikation/`, `templates/kommunikation/`
 
@@ -253,26 +252,25 @@ Gutes Catering ist entscheidend für die Teilnehmer-Erfahrung und Networking-Mö
 
 ---
 
-### Issue 10: Einreichungen sichten und Programm finalisieren
+### Issue 10: Speaker-Zusagen einholen und Programm finalisieren
 
-**Titel:** CfP-Einreichungen bewerten und Programm aufstellen
+**Titel:** Speaker-Zusagen einholen und Programm aufstellen
 
 **Phase:** Phase 3 – Umsetzung  
 **Priorität:** 🔴 Hoch  
 **Agent:** Programm
 
 **Beschreibung:**
-Nach CfP-Deadline muss das Programm-Komitee Einreichungen bewerten und die finale Agenda aufstellen.
+Nach dem Versand der Einladungen müssen Speaker-Zusagen eingeholt und die finale Agenda aufgestellt werden.
 
 **Aufgaben:**
-- [ ] Einreichungen sammeln und kategorisieren
-- [ ] Bewertung nach Rubrik durchführen
-- [ ] Programm-Komitee-Meeting: Auswahl treffen
-- [ ] Zu- und Absagen an Einreichende versenden
+- [ ] Speaker-Zusagen nachverfolgen und dokumentieren
+- [ ] Programm-Meeting: Agenda-Entscheidungen treffen
+- [ ] Absagen kommunizieren und ggf. Ersatz einladen
 - [ ] Agenda aufbauen (Räume, Slots, Pausen)
 - [ ] Agenda auf Website veröffentlichen
 
-**Abhängigkeit:** Nach CfP-Deadline (Juni 2026)
+**Abhängigkeit:** Nach Speaker-Einladungen (April 2026)
 
 **Ressourcen:** `workstreams/programm/`
 
@@ -468,12 +466,12 @@ Steffen Höpfner forscht zur Mensch-KI-Zusammenarbeit. Das Team erstellt einen a
 ## Abhängigkeiten zwischen Issues
 
 ```
-Issue 2 (Event-Konzept) → Issue 3 (Venue), Issue 4 (CfP), Issue 6 (Budget)
+Issue 2 (Event-Konzept) → Issue 3 (Venue), Issue 4 (Speaker-Kuration), Issue 6 (Budget)
 Issue 3 (Venue) → Issue 8 (Technik), Issue 9 (Catering), Issue 14 (Unterkunft)
-Issue 4 (CfP) → Issue 5 (Kommunikation), Issue 10 (Einreichungen)
+Issue 4 (Speaker-Kuration) → Issue 5 (Kommunikation), Issue 10 (Speaker-Zusagen)
 Issue 6 (Budget) → alle kostenrelevanten Issues
 Issue 7 (Registrierung) → Issue 13 (Helfer: Check-In)
-Issue 10 (Einreichungen) → Issue 11 (Speaker), Issue 12 (Kommunikation: Programm)
+Issue 10 (Speaker-Zusagen) → Issue 11 (Speaker-Management), Issue 12 (Kommunikation: Programm)
 Issues 3–14 → Issue 15 (Durchführung)
 Issue 15 (Durchführung) → Issues 16–18 (Nachbereitung)
 ```

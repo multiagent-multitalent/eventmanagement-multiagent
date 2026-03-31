@@ -19,13 +19,13 @@ Einen operativen Content-Kalender für alle Social-Media-Kanäle und Newsletter 
 
 ## Eingaben (Inputs)
 - `workstreams/kommunikation/kommunikationsplan.md` – Kommunikationsplan mit Phasen und Maßnahmen
-- `workstreams/programm/cfp-text.md` – CfP-Inhalte für Content
+- `workstreams/programm/track-konzept.md` – Track-Themen für Content
 
 ## Aufgaben (Checkliste)
 - [ ] Content-Kalender-Vorlage erstellen: Spalten Datum | Kanal | Format | Titel | Text-Entwurf | Bild-Beschreibung | Verantwortliche/r | Status
 - [ ] Erste 8 Wochen (01.05.–26.06.2026) vollständig befüllen
-- [ ] CfP-Promotion-Serie planen: Mindestens 6 Posts mit verschiedenen Winkeln (Call to Submit, Track-Vorstellung, FAQ, Reminder, Last-Call)
-- [ ] Wiederverwendbare Content-Formate definieren: „Did you know?"-Posts über AI Transparency, Speaker-Spotlights (nach CfP), Team-Vorstellungen
+- [ ] Speaker-Ankündigungs-Serie planen: Posts für Speaker-Spotlights, Track-Vorstellungen, Event-Format
+- [ ] Wiederverwendbare Content-Formate definieren: „Did you know?"-Posts über AI Transparency, Speaker-Spotlights, Team-Vorstellungen
 - [ ] Hashtag-Strategie festlegen: primäre Hashtags (#AITD2026, #AITransparency etc.)
 - [ ] Bild-/Grafik-Beschreibungen für Social-Media-Designs erstellen (als Brief für Design-Tool)
 - [ ] Newsletter-Inhalte für Mai und Juni vorskizzieren
@@ -37,4 +37,4 @@ Einen operativen Content-Kalender für alle Social-Media-Kanäle und Newsletter 
 ## Hinweise für den Agenten
 - Der Content-Kalender muss auch nach der Übergabe (30.06.2026) von COAI weitergepflegt werden können – gestalte ihn deshalb einfach und selbsterklärend.
 - Plane pro Woche mindestens 2 LinkedIn-Posts, 3–4 Twitter/Mastodon-Posts und alle 2 Wochen einen Newsletter-Eintrag.
-- Erstelle für die CfP-Deadline-Woche (09.–15.06.2026) eine intensivere Content-Dichte (Last-Call-Kommunikation).
+- Erstelle für die Programm-Ankündigungs-Woche (Ende Juli 2026) eine intensivere Content-Dichte.

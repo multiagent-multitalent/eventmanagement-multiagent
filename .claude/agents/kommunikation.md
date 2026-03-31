@@ -48,7 +48,7 @@ Tonalität:
 
 ## Typische Aufgaben
 
-- „Erstelle einen LinkedIn-Post zur Ankündigung des CfP"
+- „Erstelle einen LinkedIn-Post zur Ankündigung des Events"
 - „Schreibe eine Pressemitteilung für den Event-Launch"
 - „Erstelle E-Mail-Templates für Speaker-Einladungen"
 - „Plane den Content-Kalender für die nächsten 4 Wochen"

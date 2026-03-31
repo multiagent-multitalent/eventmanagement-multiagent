@@ -169,4 +169,4 @@ Die AITD 2026 umfasst **3 parallele Tracks** über 3 Tage, ergänzt durch eine g
 
 ---
 
-*Nächster Schritt: CfP-Ausschreibung basierend auf diesem Track-Konzept erstellen → `workstreams/programm/cfp-ausschreibung.md`*
+*Nächster Schritt: Speaker-Shortlist basierend auf diesem Track-Konzept erstellen und Einladungen versenden.*

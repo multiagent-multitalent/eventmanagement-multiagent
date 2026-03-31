@@ -52,7 +52,6 @@
 
 | Artefakt | Datei | Agent | Status |
 |---|---|---|---|
-| CfP-Ausschreibung (DE+EN) | `workstreams/programm/cfp-ausschreibung.md` | Programm | ✅ |
 | Agenda-Entwurf (3 Tage) | `workstreams/programm/agenda-entwurf.md` | Programm | ✅ |
 | Social-Media-Kit | `workstreams/kommunikation/social-media-kit.md` | Kommunikation | ✅ |
 | Catering-Konzept | `workstreams/catering/catering-konzept.md` | Operations | ✅ |
@@ -82,14 +81,14 @@
 2. Venue-Prioritätenliste bestätigen → Anfragen versenden
 3. Budget-Rahmen genehmigen (~46.675 € realistisches Szenario)
 4. Track-Konzept freigeben (3 Tracks)
-5. CfP freigeben (Veröffentlichung 30. April 2026)
+5. Speaker-Shortlist freigeben und Einladungen versenden (30. April 2026)
 6. Streaming-Entscheidung
 7. Ticketpreise bestätigen
 8. Team-Rollen besetzen
 
 **Kritischer Pfad:**
 → Venue-Anfragen versenden (SOFORT – Oktober ist Hochsaison!)
-→ CfP veröffentlichen (30.04.2026)
+→ Speaker-Einladungen versenden (30.04.2026)
 → Registrierung öffnen (01.05.2026)
 
 ---

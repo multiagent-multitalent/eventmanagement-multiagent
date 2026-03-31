@@ -35,5 +35,5 @@ Einen detaillierten Kommunikationsplan für die gesamte Laufzeit des Events erst
 
 ## Hinweise für den Agenten
 - Der Plan muss für COAI nutzbar sein nach der Übergabe (30.06.2026) – dokumentiere auch die Kommunikationsmaßnahmen für Juli–November.
-- Plane explizit eine Kommunikation nach CfP-Deadline (15.06.2026) zur Bekanntgabe des Programms (ca. Ende Juli 2026).
+- Plane explizit eine Kommunikation nach Eingang der Speaker-Zusagen (Juni 2026) zur Bekanntgabe des Programms (ca. Ende Juli 2026).
 - Integriere die Meilensteine aus `config/event.yaml` als feste Ankerpunkte im Kommunikationsplan.
