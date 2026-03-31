@@ -1,6 +1,6 @@
 # Dashboard: AI Transparency Days 2026
 
-*Zuletzt aktualisiert: 2026-03-30 (Automatisch durch Orchestrator-Agent)*
+*Zuletzt aktualisiert: 2026-03-31*
 
 ---
 
@@ -110,6 +110,12 @@
 - [ ] Streaming: ja oder nein?
 
 → Alle Entscheidungen zentral in `CONFIRM.md` aufgelistet.
+
+---
+
+## Projektzeitplan
+
+**→ Detaillierter Zeitplan mit Wochen, Aufgaben und Meilensteinen:** `dashboard/zeitplan.md`
 
 ---
 

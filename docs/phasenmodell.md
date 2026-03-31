@@ -4,7 +4,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ---
 
-## Phase 1: Initialisierung (April 2026)
+## Phase 1: Initialisierung (01.–15. April 2026 | KW 14–15)
 
 **Ziel:** Klares Event-Konzept, Team aufgestellt, Grundlagen gelegt.
 
@@ -23,7 +23,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ---
 
-## Phase 2: Planung (April–Mai 2026)
+## Phase 2: Planung (28. April – 31. Mai 2026 | KW 18–22)
 
 **Ziel:** Alle wesentlichen Entscheidungen getroffen, Verträge auf dem Weg.
 
@@ -47,7 +47,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ---
 
-## Phase 3: Umsetzung (Mai–September 2026)
+## Phase 3: Umsetzung (01. Juni – 30. September 2026 | KW 23–39)
 
 **Ziel:** Alle Arbeitspakete umgesetzt, Event ist buchbar und kommuniziert.
 
@@ -72,7 +72,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ---
 
-## Phase 4: Durchführung (Oktober 2026)
+## Phase 4: Durchführung (12.–18. Oktober 2026 | KW 41–42)
 
 **Ziel:** Reibungsloses Event für alle Teilnehmer.
 
@@ -96,7 +96,7 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 
 ---
 
-## Phase 5: Nachbereitung (November 2026)
+## Phase 5: Nachbereitung (19. Oktober – 30. November 2026 | KW 43–48)
 
 **Ziel:** Erkenntnisse sichern, Inhalte veröffentlichen, nächstes Event vorbereiten.
 
@@ -131,3 +131,9 @@ Dieses Dokument beschreibt die Planungsphasen des Events und die jeweiligen Schw
 | Programm finalisiert | Juli 2026 | Phase 3 |
 | Event | 14.–16. Oktober 2026 | Phase 4 |
 | Nachbereitung abgeschlossen | November 2026 | Phase 5 |
+
+---
+
+## Detaillierter Projektzeitplan
+
+**→ Wochengenaue Aufgabenliste mit Zuständigkeiten und Prioritäten:** `dashboard/zeitplan.md`
