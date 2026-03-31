@@ -1,17 +1,4 @@
-# Event-Konfiguration
-#
-# Fülle diese Datei mit den Details deines Events aus.
-# Der Orchestrator-Agent liest diese Konfiguration und generiert
-# automatisch alle Planungsartefakte für alle Workstreams.
-#
-# DEMO-WERTE: Die folgenden Werte stammen von den AI Transparency Days 2026
-# und dienen als Beispiel. Ersetze sie mit deinen eigenen Event-Details.
-# Vollständige Demo-Outputs findest du in: examples/aitd-2026/
-#
-# NUTZUNG:
-#   1. Ersetze alle Werte durch deine Event-Details
-#   2. Starte den Orchestrator-Agenten (siehe QUICKSTART.md)
-#   3. Alle Planungsartefakte werden automatisch generiert
+# Event-Konfiguration: AI Transparency Days 2026
 
 event:
   name: "AI Transparency Days 2026"

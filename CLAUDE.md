@@ -1,6 +1,8 @@
 # CLAUDE.md – Einstiegspunkt für KI-Agenten
 
-Willkommen im Event-Management-System für die **AI Transparency Days 2026** (AITD 2026).
+Willkommen im universellen Event-Management-System. Dieses Repository ermöglicht die vollautomatische Planung von Events jeder Art mit KI-Agenten.
+
+> **Demo-Beispiel:** Die AI Transparency Days 2026 (AITD 2026) zeigen als Referenzimplementierung, was das System generiert. Alle Demo-Artefakte liegen in [`examples/aitd-2026/`](examples/aitd-2026/).
 
 ---
 
@@ -109,9 +111,9 @@ eventmanagement-multiagent/
 │   ├── unterkunft-anreise/
 │   └── nachbereitung/
 ├── config/                          # Event- und Team-Konfiguration
-│   ├── event.yaml
+│   ├── event.yaml                   # ← Hier deine Event-Details eintragen (Demo: AITD 2026)
 │   └── team.yaml
-├── workstreams/                     # Laufende Arbeit pro Bereich
+├── workstreams/                     # Laufende Arbeit pro Bereich (vom Orchestrator befüllt)
 │   ├── programm/
 │   ├── kommunikation/
 │   ├── teilnehmer/
@@ -122,6 +124,8 @@ eventmanagement-multiagent/
 │   ├── sponsoring/
 │   ├── unterkunft-anreise/
 │   └── nachbereitung/
+├── examples/                        # 📖 Demo-Outputs für fertige Events
+│   └── aitd-2026/                   # AI Transparency Days 2026 – vollständiges Beispiel
 ├── dashboard/                       # Status und Tracking
 │   └── status.md
 ├── archiv/                          # Lessons Learned, Entscheidungslog
@@ -146,7 +150,7 @@ eventmanagement-multiagent/
 ## Für neue Teammitglieder
 
 Frage einfach einen der Agenten:
-- „Wie funktioniert die Eventplanung in diesem Projekt?"
+- „Wie funktioniert die Eventplanung in diesem System?"
 - „Was muss als Nächstes passieren?"
 - „Welche Artefakte fehlen noch in Workstream X?"
 - „Wer ist für was verantwortlich?"
@@ -155,4 +159,4 @@ Der Agent liest diese Datei und die verlinkten Dokumente und gibt dir eine fundi
 
 ---
 
-*Dieses Repository ist eine Vorlage und kann für zukünftige Events geklont werden. Konfiguriere einfach `config/event.yaml` und `config/team.yaml` und starte direkt.*
+*Dieses Repository ist eine universelle Vorlage für Events jeder Art. Konfiguriere `config/event.yaml` und `config/team.yaml`, starte den Orchestrator – fertig. Die AI Transparency Days 2026 in `examples/aitd-2026/` zeigen als Demo, was das System automatisch generiert.*

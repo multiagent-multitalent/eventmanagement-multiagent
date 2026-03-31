@@ -1,8 +1,8 @@
-# Event-Management mit KI-Agenten – AI Transparency Days 2026
+# Event-Management mit KI-Agenten
 
-Dieses Repository ist das zentrale Arbeits- und Dokumentationssystem für die Planung der **AI Transparency Days 2026 (AITD 2026)** mit KI-Agenten.
+Dieses Repository ist ein universelles Planungssystem für Events jeder Art – von Konferenzen über Workshops bis zu Hackathons. KI-Agenten übernehmen die gesamte Routineplanung; du gibst nur die Event-Details ein.
 
-Es entsteht im Rahmen des Praxisprojekts *Sommersemester 2026* an der Hochschule Ansbach, in Zusammenarbeit mit der **COAI gGmbH** (Nürnberg).
+> **Demo-Beispiel:** Die AI Transparency Days 2026 (AITD 2026) dienen als Referenzimplementierung und zeigen, was das System automatisch generiert. Alle Demo-Artefakte liegen in [`examples/aitd-2026/`](examples/aitd-2026/).
 
 ---
 
@@ -24,27 +24,21 @@ Es entsteht im Rahmen des Praxisprojekts *Sommersemester 2026* an der Hochschule
 ```text
 eventmanagement-multiagent/
 ├── CLAUDE.md                        # Einstiegspunkt für KI-Agenten
-├── Task Requirements.md             # Aufgabenstellung des Projekts
-├── .claude/agents/                  # 5 Agenten-Konfigurationen
+├── QUICKSTART.md                    # 🚀 Schnellstart (3 Schritte)
+├── CONFIRM.md                       # ✅ Bestätigungsdokument (nach Orchestrator-Lauf)
+├── .claude/agents/                  # 6 Agenten-Konfigurationen
+│   ├── orchestrator.md              # Master-Orchestrator
 │   ├── kommunikation.md
 │   ├── operations.md
 │   ├── programm.md
 │   ├── koordination.md
 │   └── dokumentation.md
 ├── docs/                            # Phasenmodell, Workstreams, Rollen
-│   ├── phasenmodell.md
-│   ├── workstreams.md
-│   └── rollen.md
 ├── templates/                       # Artefakt-Vorlagen für alle Phasen
-│   ├── programm/                    # CfP, Agenda, Speaker-Briefing
-│   ├── kommunikation/               # Content-Kalender, Pressemitteilung
-│   ├── venue-logistik/              # Venue-Anforderungen
-│   ├── nachbereitung/               # Protokoll, Feedback-Survey
-│   └── ...
 ├── config/                          # Event- und Team-Konfiguration
-│   ├── event.yaml
+│   ├── event.yaml                   # ← Hier deine Event-Details eintragen
 │   └── team.yaml
-├── workstreams/                     # Laufende Arbeit pro Bereich
+├── workstreams/                     # Laufende Arbeit pro Bereich (vom Orchestrator befüllt)
 │   ├── programm/
 │   ├── kommunikation/
 │   ├── teilnehmer/
@@ -55,24 +49,31 @@ eventmanagement-multiagent/
 │   ├── sponsoring/
 │   ├── unterkunft-anreise/
 │   └── nachbereitung/
+├── examples/                        # 📖 Demo-Outputs für fertige Events
+│   └── aitd-2026/                   # AI Transparency Days 2026 – vollständiges Beispiel
 ├── dashboard/                       # Status und Tracking
 │   └── status.md
-└── archiv/                          # Lessons Learned, Entscheidungslog
-    ├── entscheidungslog.md
-    └── lessons-learned.md
+└── archiv/                          # Entscheidungslog, Lessons Learned
 ```
 
 ---
 
-## Das Event
+## Für welche Events geeignet?
 
-**AI Transparency Days 2026** – Oktober 2026, Nürnberg  
-100–150 Teilnehmer | 2–3 Tage | Vorträge + Workshops + Hackathon  
-Veranstalter: [COAI gGmbH](https://www.coairesearch.org)
+Das System funktioniert für jede Art von Event:
+
+- **Konferenzen** (z. B. Fachkonferenzen, Community-Events)
+- **Workshops & Seminare**
+- **Hackathons**
+- **Hybride Events** (Präsenz + Online)
+- Jede Kombination davon
+
+Einfach `config/event.yaml` anpassen – der Rest läuft automatisch.
 
 ---
 
-## Betreuung
+## Demo-Beispiel
 
-- Prof. Dr. Sigurd Schacht (Hochschule Ansbach)
-- Steffen Höpfner (COAI gGmbH)
+Die **AI Transparency Days 2026** (Konferenz, 125 Teilnehmer, Nürnberg) dienen als vollständiges Beispiel:
+
+→ [`examples/aitd-2026/`](examples/aitd-2026/) – Alle generierten Artefakte ansehen
