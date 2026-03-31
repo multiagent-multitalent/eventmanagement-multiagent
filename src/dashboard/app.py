@@ -351,9 +351,17 @@ def render_stage2_tab() -> None:
 
         posts = content.get("social_media_posts", {})
         if posts:
+            _PLATFORM_LABELS = {
+                "x_twitter": "X (ehemals Twitter)",
+                "linkedin": "LinkedIn",
+                "instagram": "Instagram",
+                "facebook": "Facebook",
+                "mastodon": "Mastodon",
+            }
             with st.expander("📱 Social-Media-Posts"):
                 for platform, text in posts.items():
-                    st.markdown(f"**{platform.replace('_', ' ').title()}**")
+                    label = _PLATFORM_LABELS.get(platform, platform.replace("_", " ").title())
+                    st.markdown(f"**{label}**")
                     st.text_area(platform, value=text, height=150, disabled=True, key=f"post_{platform}")
 
         pr = content.get("press_release", {})

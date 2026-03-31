@@ -204,6 +204,14 @@ def _render_agenda_md(event_name: str, planning: dict) -> str:
 
 
 def _render_communication_md(event_name: str, content: dict) -> str:
+    _PLATFORM_LABELS = {
+        "x_twitter": "X (ehemals Twitter)",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "mastodon": "Mastodon",
+    }
+
     lines = [f"# Kommunikationsplan: {event_name}\n\n"]
 
     email = content.get("invitation_email", {})
@@ -218,7 +226,8 @@ def _render_communication_md(event_name: str, content: dict) -> str:
     if posts:
         lines.append("## Social-Media-Posts\n\n")
         for platform, text in posts.items():
-            lines.append(f"### {platform.replace('_', ' ').title()}\n\n")
+            label = _PLATFORM_LABELS.get(platform, platform.replace("_", " ").title())
+            lines.append(f"### {label}\n\n")
             lines.append(f"{text}\n\n")
 
     pr = content.get("press_release", {})

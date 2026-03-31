@@ -249,7 +249,7 @@ class MockLLM(BaseChatModel):
                 ),
             },
             "social_media_posts": {
-                "twitter_x": (
+                "x_twitter": (
                     "🚀 Save the Date! Die #AITransparencyDays 2026 kommen nach Nürnberg!\n\n"
                     "📅 14.–16. Oktober 2026\n"
                     "📍 Nürnberg\n"
@@ -333,7 +333,7 @@ def create_llm() -> BaseChatModel:
 
     try:
         if provider == "ollama":
-            from langchain_community.chat_models import ChatOllama
+            from langchain_ollama import ChatOllama
 
             llm = ChatOllama(
                 model=cfg["model"],
@@ -349,8 +349,8 @@ def create_llm() -> BaseChatModel:
 
             return ChatOpenAI(
                 model=cfg["model"],
-                openai_api_base=cfg["base_url"],
-                openai_api_key=cfg["api_key"],
+                base_url=cfg["base_url"],
+                api_key=cfg["api_key"],
                 temperature=cfg["temperature"],
             )
 

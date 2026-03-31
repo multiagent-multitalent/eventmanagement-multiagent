@@ -29,7 +29,7 @@ COAI gGmbH
 
 ## Social-Media-Posts
 
-### Twitter X
+### X (ehemals Twitter)
 
 🚀 Save the Date! Die #AITransparencyDays 2026 kommen nach Nürnberg!
 
@@ -42,7 +42,7 @@ Keynotes, Workshops & Hackathon – seid dabei! 🤖✨
 👉 Jetzt registrieren: [Link]
 #AITD2026 #KI #ArtificialIntelligence #AIAct #Nürnberg
 
-### Linkedin
+### LinkedIn
 
 🎉 **AI Transparency Days 2026 – Call for Participation!**
 
