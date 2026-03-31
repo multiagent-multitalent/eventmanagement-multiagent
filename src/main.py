@@ -53,9 +53,11 @@ def _select_option(options: list[dict], label: str) -> str:
             if 0 <= idx < len(options):
                 return options[idx].get("name", f"Option {idx+1}")
             print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben.")
-        except (ValueError, EOFError):
-            # Non-interactive: default to first option
-            print(f"  Keine Eingabe – wähle automatisch Option 1.")
+        except ValueError:
+            print(f"  Bitte eine Zahl zwischen 1 und {len(options)} eingeben.")
+        except EOFError:
+            # Non-interactive environment: default to first option
+            print(f"  Nicht-interaktiver Modus – wähle automatisch Option 1.")
             return options[0].get("name", "Option 1")
         except KeyboardInterrupt:
             print("\nAbgebrochen.")

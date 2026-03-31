@@ -108,7 +108,9 @@ def _write_output_files(state: EventPlanningState) -> None:
     # --- Venue research ---
     venue_path = repo_root / "workstreams" / "venue-logistik" / "venue-recherche.md"
     venue_path.parent.mkdir(parents=True, exist_ok=True)
-    venue_path.write_text(_render_venue_md(event_name, research, user_decision), encoding="utf-8")
+    venue_path.write_text(
+        _render_venue_md(event_name, research, user_decision), encoding="utf-8"
+    )
     logger.info("Written: %s", venue_path)
 
     # --- Catering concept ---
@@ -133,7 +135,8 @@ def _write_output_files(state: EventPlanningState) -> None:
 def _render_venue_md(event_name: str, research: dict, user_decision: dict) -> str:
     selected = user_decision.get("selected_venue", "")
     lines = [f"# Venue-Recherche: {event_name}\n"]
-    lines.append(f"**Ausgewählte Venue:** {selected}\n" if selected else "")
+    if selected:
+        lines.append(f"**Ausgewählte Venue:** {selected}\n")
     lines.append("\n## Venue-Optionen\n")
     for opt in research.get("venue_options", []):
         score = "⭐" * int(opt.get("recommendation_score", 0))
@@ -153,7 +156,8 @@ def _render_venue_md(event_name: str, research: dict, user_decision: dict) -> st
 def _render_catering_md(event_name: str, research: dict, user_decision: dict) -> str:
     selected = user_decision.get("selected_catering", "")
     lines = [f"# Catering-Konzept: {event_name}\n"]
-    lines.append(f"**Ausgewählter Caterer:** {selected}\n\n" if selected else "\n")
+    if selected:
+        lines.append(f"**Ausgewählter Caterer:** {selected}\n\n")
     lines.append("## Catering-Optionen\n")
     for opt in research.get("catering_options", []):
         score = "⭐" * int(opt.get("recommendation_score", 0))

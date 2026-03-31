@@ -340,8 +340,8 @@ def create_llm() -> BaseChatModel:
                 base_url=cfg["base_url"],
                 temperature=cfg["temperature"],
             )
-            # Warm-up ping to detect connectivity early
-            llm.invoke("ping")
+            # Connectivity probe – detect early if Ollama is reachable
+            llm.invoke("Verbindungstest")
             return llm
 
         if provider in ("openai", "openai_compatible"):
