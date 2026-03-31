@@ -1,6 +1,8 @@
 # Quickstart: Event-Planung mit KI-Agenten
 
-Dieses Repository ermöglicht vollständige Event-Planung durch KI-Agenten – du gibst die Event-Details ein, die Agenten erledigen den Rest.
+Dieses Repository ermöglicht vollständige Event-Planung durch KI-Agenten – du gibst die Event-Details ein, die Agenten erledigen den Rest. Es funktioniert für **jedes Event**: Konferenzen, Workshops, Hackathons, Seminare und mehr.
+
+> **Demo:** Sieh dir [`examples/aitd-2026/`](examples/aitd-2026/) an – dort findest du alle Artefakte, die der Orchestrator für die AI Transparency Days 2026 automatisch generiert hat.
 
 ---
 
@@ -112,9 +114,11 @@ Nach dem Start erstellt der Orchestrator automatisch alle Planungsartefakte:
 ```bash
 git clone https://github.com/multiagent-multitalent/eventmanagement-multiagent.git mein-event
 cd mein-event
-# config/event.yaml anpassen
-# Orchestrator starten → alles fertig
+# config/event.yaml mit deinen Event-Details ausfüllen
+# Orchestrator starten → alle Planungsartefakte werden in workstreams/ generiert
 ```
+
+Die `config/event.yaml` enthält Demo-Werte der AI Transparency Days 2026 als Orientierung. Ersetze diese mit deinen eigenen Event-Details.
 
 ---
 

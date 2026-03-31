@@ -1,10 +1,6 @@
-# Team-Konfiguration
-#
-# Trage hier die tatsächlichen Team-Mitglieder ein.
-# Diese Konfiguration wird von den Agenten zur Koordination genutzt.
-#
-# DEMO-WERTE: Diese Datei enthält die Team-Struktur für die AI Transparency Days 2026
-# als Beispiel. Ersetze die Einträge mit deinen eigenen Team-Mitgliedern.
+# Team-Konfiguration: AI Transparency Days 2026
+
+# Trage hier die tatsächlichen Team-Mitglieder ein
 
 team:
   # Projektleitung
