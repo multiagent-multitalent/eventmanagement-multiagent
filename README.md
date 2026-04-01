@@ -6,9 +6,10 @@ Die Demo-Implementierung ist AI Transparency Days 2026 unter [examples/aitd-2026
 ## Startpunkte
 
 1. Für Menschen: [QUICKSTART.md](QUICKSTART.md)
-2. Für Agenten: [CLAUDE.md](CLAUDE.md)
-3. Projektstatus: [dashboard/status.md](dashboard/status.md)
-4. Bestätigungen: [CONFIRM.md](CONFIRM.md)
+2. Vollständige Anleitung: [ANLEITUNG.md](ANLEITUNG.md)
+3. Für Agenten: [CLAUDE.md](CLAUDE.md)
+4. Projektstatus: [dashboard/status.md](dashboard/status.md)
+5. Bestätigungen: [CONFIRM.md](CONFIRM.md)
 
 ## Struktur auf einen Blick
 
