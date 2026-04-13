@@ -1,52 +1,55 @@
 # Venue-Recherche: AI Transparency Days 2026
-**Ausgewählte Venue:** NürnbergConvention
+**Ausgewählte Venue:** Nürnberg Convention Center (NCC)
 
 ## Venue-Optionen
-### NürnbergConvention ⭐⭐⭐⭐
-Zentrale Konferenz- und Tagungsstätte mit moderner Infrastruktur.
+### Nürnberg Convention Center (NCC) ⭐⭐⭐⭐⭐
+Modernes Kongresszentrum im Herzen von Nürnberg mit flexiblen Raumaufteilungen und erstklassiger AV-Technik.
 
-**Geschätzte Kosten:** 4500 – 6000 EUR
+**Geschätzte Kosten:** 8.500 – 12.000 EUR
 
 **Vorteile:**
-- Große Kapazität
-- Gute technische Ausstattung
-- Zentral gelegen
+- Zentrale Lage direkt am Hauptbahnhof
+- Kapazität für 50–500 Personen
+- Vollständige technische Ausstattung inklusive
+- Erfahrenes Veranstaltungsteam vor Ort
 
 **Nachteile:**
-- Höhere Kosten
-- Weniger individuelle Atmosphäre
+- Höhere Mietkosten im Vergleich zu Alternativen
+- Eingeschränkte Parkmöglichkeiten in der Nähe
 
 ---
 
-### beets&roots ⭐⭐⭐⭐
-Spezialisiert auf hochwertige Catering-Lösungen mit regionalem Fokus.
+### Technische Hochschule Nürnberg – Campus Innovationszentrum ⭐⭐⭐⭐
+Moderner Universitätscampus mit Hörsälen, Seminarräumen und offenen Kollaborationsflächen.
 
-**Geschätzte Kosten:** 3500 – 5000 EUR
+**Geschätzte Kosten:** 3.500 – 5.500 EUR
 
 **Vorteile:**
-- Exzellente kulinarische Angebote
-- Flexibilität bei Menügestaltung
-- Gute Reputation
+- Akademisches Ambiente passend zur Zielgruppe
+- Günstige Konditionen für Non-Profit-Veranstalter
+- Gute ÖPNV-Anbindung
+- Flexible Raumkombinationen für parallele Tracks
 
 **Nachteile:**
-- Begrenzte Verfügbarkeit für große Gruppen
-- Höhere Preise im Vergleich zu Standardcatering
+- Catering muss extern organisiert werden
+- Begrenzte Verfügbarkeit an Wochenenden
 
 ---
 
-### Tourismus Nürnberg ⭐⭐⭐
-Ideal für Veranstaltungen mit touristischem Fokus, gut erreichbar.
+### Norisring Eventlocation ⭐⭐⭐
+Historisches Industriegebäude mit urbanem Charakter, ideal für kreative und technologiefokussierte Events.
 
-**Geschätzte Kosten:** 3000 – 4000 EUR
+**Geschätzte Kosten:** 5.000 – 7.500 EUR
 
 **Vorteile:**
-- Gute Sichtbarkeit
-- Zugang zu touristischen Netzwerken
-- Günstige Preise für kleinere Gruppen
+- Einzigartiges Ambiente mit Wiedererkennungswert
+- Großzügige Grundfläche für Hackathon-Bereich
+- Ausreichend Parkplätze vorhanden
 
 **Nachteile:**
-- Weniger technische Ausstattung
-- Begrenzte Räumlichkeiten für große Konferenzen
+- Aufwendigere Bestuhlung und Dekoration notwendig
+- Akustik erfordert zusätzliche Beschallungsanlage
+- Entfernung vom Stadtzentrum (ca. 15 min mit ÖPNV)
 
 ---
 

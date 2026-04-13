@@ -5,6 +5,7 @@ import logging
 import os
 import uuid
 from datetime import date, datetime
+from pathlib import Path
 from typing import Any
 
 import streamlit as st
@@ -14,6 +15,7 @@ from src.config import (
     get_llm_config,
     load_event_config,
     normalize_llm_provider,
+    get_repo_root,
 )
 from src.llm import list_available_models
 from src.workflows.event_planning_graph import create_event_planning_graph, create_thread
@@ -887,6 +889,156 @@ def _cancel_workflow() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Documentation tab
+# ---------------------------------------------------------------------------
+
+def render_documentation_tab() -> None:
+    """Render the documentation and execution log tab."""
+    st.header("📊 Dokumentation & Ausführungslog")
+    st.caption("Vollständiges Protokoll aller Agenten-Schritte und Ausführungen")
+
+    repo_root = get_repo_root()
+    log_file = repo_root / "workstreams" / "PLANUNGSLOG.md"
+    json_log_file = repo_root / "workstreams" / "PLANUNGSLOG.json"
+
+    # Display markdown log
+    if log_file.exists():
+        st.subheader("📝 Planungslog (Markdown)")
+        with st.expander("Markdown-Log anzeigen", expanded=True):
+            log_content = log_file.read_text(encoding="utf-8")
+            st.markdown(log_content)
+            
+            # Download button
+            st.download_button(
+                label="⬇️ Planungslog als Markdown herunterladen",
+                data=log_content,
+                file_name="PLANUNGSLOG.md",
+                mime="text/markdown",
+                key="download_planning_log_md",
+            )
+    else:
+        st.info("Noch kein Planungslog vorhanden. Starte Stage 1 oder 2, um die Ausführungen zu dokumentieren.")
+
+    st.divider()
+
+    # Display JSON log
+    if json_log_file.exists():
+        st.subheader("📋 Strukturiertes Ausführungslog (JSON)")
+        try:
+            json_entries = json.loads(json_log_file.read_text(encoding="utf-8"))
+            
+            if json_entries:
+                # Summary statistics
+                col1, col2, col3, col4 = st.columns(4)
+                agent_steps = [e for e in json_entries if "agent" in e]
+                stages = [e for e in json_entries if e.get("type") == "workflow_stage"]
+                decisions = [e for e in json_entries if e.get("type") == "user_decision"]
+                
+                with col1:
+                    st.metric("Agenten-Schritte", len(agent_steps))
+                with col2:
+                    st.metric("Workflow-Phasen", len(stages))
+                with col3:
+                    st.metric("Entscheidungen", len(decisions))
+                with col4:
+                    st.metric("Insgesamt", len(json_entries))
+                
+                st.divider()
+                
+                # Agent steps timeline
+                if agent_steps:
+                    st.subheader("🤖 Agenten-Ausführungen")
+                    for entry in agent_steps:
+                        with st.container(border=True):
+                            timestamp = entry.get("timestamp", "")
+                            agent = entry.get("agent", "agent")
+                            step = entry.get("step", "")
+                            status = entry.get("status", "unknown")
+                            duration = entry.get("duration_seconds")
+                            error = entry.get("error")
+                            
+                            # Status emoji
+                            status_emoji = {
+                                "pending": "⏳",
+                                "running": "🔄",
+                                "completed": "✅",
+                                "error": "❌",
+                            }.get(status, "•")
+                            
+                            col_left, col_middle, col_right = st.columns([2, 3, 1])
+                            with col_left:
+                                st.markdown(f"**{agent}**")
+                                st.caption(timestamp)
+                            with col_middle:
+                                st.markdown(f"{status_emoji} {step}")
+                                if duration:
+                                    st.caption(f"Dauer: {duration:.2f}s")
+                            with col_right:
+                                st.markdown(status)
+                            
+                            if error:
+                                st.error(f"Fehler: {error}")
+                
+                st.divider()
+                
+                # Workflow stages timeline
+                if stages:
+                    st.subheader("▶️ Workflow-Phasen")
+                    for entry in stages:
+                        with st.container(border=True):
+                            timestamp = entry.get("timestamp", "")
+                            stage = entry.get("stage")
+                            stage_name = entry.get("stage_name", "")
+                            status = entry.get("status", "")
+                            description = entry.get("description", "")
+                            
+                            status_emoji = {
+                                "started": "▶️",
+                                "completed": "🎯",
+                                "paused": "⏸️",
+                                "aborted": "❌",
+                            }.get(status, "•")
+                            
+                            st.markdown(f"{status_emoji} **Stage {stage}: {stage_name}** – {status}")
+                            st.caption(timestamp)
+                            if description:
+                                st.markdown(f"*{description}*")
+                
+                st.divider()
+                
+                # User decisions
+                if decisions:
+                    st.subheader("👤 Benutzerentscheidungen")
+                    for entry in decisions:
+                        with st.container(border=True):
+                            timestamp = entry.get("timestamp", "")
+                            decision = entry.get("decision", {})
+                            notes = entry.get("notes", "")
+                            
+                            st.caption(timestamp)
+                            for key, value in decision.items():
+                                st.markdown(f"**{key.replace('_', ' ').title()}:** {value}")
+                            if notes:
+                                st.markdown(f"**Anmerkungen:** {notes}")
+                
+                # Download JSON log
+                st.divider()
+                st.download_button(
+                    label="⬇️ Ausführungslog als JSON herunterladen",
+                    data=json.dumps(json_entries, ensure_ascii=False, indent=2),
+                    file_name="PLANUNGSLOG.json",
+                    mime="application/json",
+                    key="download_planning_log_json",
+                )
+            else:
+                st.info("JSON-Log ist noch leer.")
+        except json.JSONDecodeError:
+            st.error("Fehler beim Lesen des JSON-Logs.")
+    else:
+        st.info("Noch kein JSON-Log vorhanden.")
+
+
+# ---------------------------------------------------------------------------
 # Stage 2 – Planning & Content tab
 # ---------------------------------------------------------------------------
 
@@ -1088,11 +1240,13 @@ def main() -> None:
         st.session_state["view_selector"] = "📍 Stage 1: Research"
     elif requested_view == "stage2":
         st.session_state["view_selector"] = "📋 Stage 2: Planung & Content"
+    elif requested_view == "documentation":
+        st.session_state["view_selector"] = "📊 Dokumentation"
     st.session_state["requested_view"] = None
 
     selected_view = st.radio(
         "Ansicht",
-        options=["📍 Stage 1: Research", "📋 Stage 2: Planung & Content"],
+        options=["📍 Stage 1: Research", "📋 Stage 2: Planung & Content", "📊 Dokumentation"],
         key="view_selector",
         horizontal=True,
     )
@@ -1105,9 +1259,12 @@ def main() -> None:
     if selected_view == "📍 Stage 1: Research":
         st.session_state["active_view"] = "stage1"
         render_stage1_tab()
-    else:
+    elif selected_view == "📋 Stage 2: Planung & Content":
         st.session_state["active_view"] = "stage2"
         render_stage2_tab()
+    else:
+        st.session_state["active_view"] = "documentation"
+        render_documentation_tab()
 
 
 if __name__ == "__main__":

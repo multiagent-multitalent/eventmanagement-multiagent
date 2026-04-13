@@ -1,0 +1,75 @@
+[
+  {
+    "timestamp": "2026-04-13T12:41:54.819675",
+    "type": "workflow_stage",
+    "stage": 1,
+    "stage_name": "Recherche & Marktanalyse",
+    "status": "started",
+    "description": "Research-Agent analysiert Venue- und Catering-Optionen"
+  },
+  {
+    "timestamp": "2026-04-13T12:42:23.369015",
+    "agent": "research_agent",
+    "step": "Venue- und Catering-Recherche",
+    "status": "completed",
+    "input_summary": "{\"event_data\": {\"event\": {\"name\": \"AI Transparency Days 2026\", \"date_start\": \"2026-10-14\", \"date_end\": \"2026-10-16\", \"city\": \"Nürnberg\", \"attendees_expected\": 125, \"budget_total\": 10000.0, \"format\": [\"Konferenz\", \"Workshop\", \"Hackathon\"], \"topics\": [\"AI Transparency\", \"AI Safety\", \"AI Governance\", \"Human Compatible AI\"], \"organizer\": {\"name\": \"COAI gGmbH\", \"full_name\": \"Gemeinnütziges Forschungsinstitut für Human Compatible AI\", \"website\": \"https://www.coairesearch.org\", \"city\": \"Nürnberg\"}},...",
+    "output_summary": "{\"venue_options_count\": 3, \"catering_options_count\": 3}",
+    "error": null,
+    "duration_seconds": null
+  },
+  {
+    "timestamp": "2026-04-13T12:43:15.962238",
+    "type": "user_decision",
+    "decision": {
+      "selected_venue": "Nürnberg Convention Center (NCC)",
+      "selected_catering": "Kochkollektiv Nürnberg"
+    },
+    "notes": ""
+  },
+  {
+    "timestamp": "2026-04-13T12:43:15.966524",
+    "type": "workflow_stage",
+    "stage": 2,
+    "stage_name": "Planung & Content",
+    "status": "started",
+    "description": "Benutzer hat Venue und Catering bestätigt"
+  },
+  {
+    "timestamp": "2026-04-13T12:43:50.854726",
+    "agent": "planning_agent",
+    "step": "Agenda, Budget & Logistik",
+    "status": "completed",
+    "input_summary": "{\"venue\": \"Nürnberg Convention Center (NCC)\", \"catering\": \"Kochkollektiv Nürnberg\"}",
+    "output_summary": "{\"schedule_days\": 3, \"budget_categories\": 9}",
+    "error": null,
+    "duration_seconds": null
+  },
+  {
+    "timestamp": "2026-04-13T12:44:08.560285",
+    "agent": "content_agent",
+    "step": "Kommunikationsplan & Social Media",
+    "status": "completed",
+    "input_summary": "{\"event_name\": \"AI Transparency Days 2026\"}",
+    "output_summary": "{\"email_created\": true, \"social_posts_count\": 3, \"press_release_created\": true}",
+    "error": null,
+    "duration_seconds": null
+  },
+  {
+    "timestamp": "2026-04-13T12:44:08.599882",
+    "agent": "system",
+    "step": "Output-Dateien erstellt",
+    "status": "completed",
+    "input_summary": "None",
+    "output_summary": "{\"output_location\": \"workstreams/\", \"files_generated\": [\"venue-logistik/venue-recherche.md\", \"catering/catering-konzept.md\", \"programm/agenda-entwurf.md\", \"kommunikation/kommunikationsplan.md\"]}",
+    "error": null,
+    "duration_seconds": null
+  },
+  {
+    "timestamp": "2026-04-13T12:44:08.604469",
+    "type": "workflow_stage",
+    "stage": 2,
+    "stage_name": "Planung & Content",
+    "status": "completed",
+    "description": "Alle Agenten haben ihre Arbeit abgeschlossen"
+  }
+]

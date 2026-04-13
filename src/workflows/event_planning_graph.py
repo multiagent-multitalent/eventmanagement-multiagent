@@ -12,9 +12,21 @@ from src.agents.content_agent import run_content_agent
 from src.agents.planning_agent import run_planning_agent
 from src.agents.research_agent import run_research_agent
 from src.config import get_repo_root
+from src.documentation import ExecutionLogger
 from src.state import EventPlanningState
 
 logger = logging.getLogger(__name__)
+
+# Global execution logger instance
+_execution_logger: ExecutionLogger | None = None
+
+
+def _get_execution_logger() -> ExecutionLogger:
+    """Get or create the global execution logger."""
+    global _execution_logger
+    if _execution_logger is None:
+        _execution_logger = ExecutionLogger(get_repo_root())
+    return _execution_logger
 
 
 # ---------------------------------------------------------------------------
@@ -22,8 +34,39 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 def research_node(state: EventPlanningState) -> dict[str, Any]:
-    """Run research agent."""
-    return run_research_agent(state)
+    """Run research agent and log execution."""
+    logger.info("Research agent starting…")
+    doc_logger = _get_execution_logger()
+    doc_logger.log_workflow_stage(
+        stage=1,
+        stage_name="Recherche & Marktanalyse",
+        status="started",
+        description="Research-Agent analysiert Venue- und Catering-Optionen"
+    )
+    
+    try:
+        result = run_research_agent(state)
+        doc_logger.log_agent_step(
+            agent_name="research_agent",
+            step_name="Venue- und Catering-Recherche",
+            status="completed",
+            input_data={"event_data": state.get("event_data", {})},
+            output_data={
+                "venue_options_count": len(result.get("research_results", {}).get("venue_options", [])),
+                "catering_options_count": len(result.get("research_results", {}).get("catering_options", [])),
+            }
+        )
+        return result
+    except Exception as e:
+        doc_logger.log_agent_step(
+            agent_name="research_agent",
+            step_name="Venue- und Catering-Recherche",
+            status="error",
+            error_message=str(e),
+            input_data={"event_data": state.get("event_data", {})}
+        )
+        raise
+
 
 
 def human_review_node(state: EventPlanningState) -> dict[str, Any]:
@@ -33,16 +76,36 @@ def human_review_node(state: EventPlanningState) -> dict[str, Any]:
     This node is only entered after the graph is resumed by the dashboard with
     an updated user_decision and status='approved' (or 'cancelled').
     """
+    doc_logger = _get_execution_logger()
     user_decision = state.get("user_decision")
     status = state.get("status", "waiting_for_user")
 
     if status == "cancelled":
+        doc_logger.log_workflow_stage(
+            stage=1,
+            stage_name="Recherche & Marktanalyse",
+            status="aborted",
+            description="Benutzer hat die Planung abgebrochen"
+        )
         return {
             "status": "cancelled",
             "next_step": "Planung abgebrochen",
         }
 
     if user_decision and status == "approved":
+        doc_logger.log_user_decision(
+            decision_data={
+                "selected_venue": user_decision.get("selected_venue"),
+                "selected_catering": user_decision.get("selected_catering"),
+            },
+            notes=user_decision.get("notes", "")
+        )
+        doc_logger.log_workflow_stage(
+            stage=2,
+            stage_name="Planung & Content",
+            status="started",
+            description="Benutzer hat Venue und Catering bestätigt"
+        )
         return {
             "stage": 2,
             "status": "running",
@@ -57,21 +120,94 @@ def human_review_node(state: EventPlanningState) -> dict[str, Any]:
 
 
 def planning_node(state: EventPlanningState) -> dict[str, Any]:
-    """Run planning agent."""
-    return run_planning_agent(state)
+    """Run planning agent and log execution."""
+    doc_logger = _get_execution_logger()
+    try:
+        result = run_planning_agent(state)
+        doc_logger.log_agent_step(
+            agent_name="planning_agent",
+            step_name="Agenda, Budget & Logistik",
+            status="completed",
+            input_data={
+                "venue": state.get("user_decision", {}).get("selected_venue"),
+                "catering": state.get("user_decision", {}).get("selected_catering"),
+            },
+            output_data={
+                "schedule_days": len(result.get("planning_output", {}).get("schedule", {})),
+                "budget_categories": len(result.get("planning_output", {}).get("budget", {}).get("breakdown", {})),
+            }
+        )
+        return result
+    except Exception as e:
+        doc_logger.log_agent_step(
+            agent_name="planning_agent",
+            step_name="Agenda, Budget & Logistik",
+            status="error",
+            error_message=str(e)
+        )
+        raise
 
 
 def content_node(state: EventPlanningState) -> dict[str, Any]:
-    """Run content agent."""
-    return run_content_agent(state)
+    """Run content agent and log execution."""
+    doc_logger = _get_execution_logger()
+    try:
+        result = run_content_agent(state)
+        doc_logger.log_agent_step(
+            agent_name="content_agent",
+            step_name="Kommunikationsplan & Social Media",
+            status="completed",
+            input_data={"event_name": state.get("event_data", {}).get("event", {}).get("name")},
+            output_data={
+                "email_created": bool(result.get("content_output", {}).get("invitation_email")),
+                "social_posts_count": len(result.get("content_output", {}).get("social_media_posts", {})),
+                "press_release_created": bool(result.get("content_output", {}).get("press_release")),
+            }
+        )
+        return result
+    except Exception as e:
+        doc_logger.log_agent_step(
+            agent_name="content_agent",
+            step_name="Kommunikationsplan & Social Media",
+            status="error",
+            error_message=str(e)
+        )
+        raise
 
 
 def finalize_node(state: EventPlanningState) -> dict[str, Any]:
     """Write markdown output files and mark workflow as completed."""
+    doc_logger = _get_execution_logger()
     try:
         _write_output_files(state)
+        doc_logger.log_agent_step(
+            agent_name="system",
+            step_name="Output-Dateien erstellt",
+            status="completed",
+            output_data={
+                "output_location": "workstreams/",
+                "files_generated": [
+                    "venue-logistik/venue-recherche.md",
+                    "catering/catering-konzept.md",
+                    "programm/agenda-entwurf.md",
+                    "kommunikation/kommunikationsplan.md"
+                ]
+            }
+        )
+        doc_logger.log_workflow_stage(
+            stage=2,
+            stage_name="Planung & Content",
+            status="completed",
+            description="Alle Agenten haben ihre Arbeit abgeschlossen"
+        )
     except Exception as exc:
         logger.error("Could not write output files: %s", exc)
+        doc_logger.log_agent_step(
+            agent_name="system",
+            step_name="Output-Dateien erstellt",
+            status="error",
+            error_message=str(exc)
+        )
 
     return {
         "stage": 2,

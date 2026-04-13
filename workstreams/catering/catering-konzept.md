@@ -1,52 +1,55 @@
 # Catering-Konzept: AI Transparency Days 2026
-**Ausgewählter Caterer:** Kaspar Schmauser
+**Ausgewählter Caterer:** Kochkollektiv Nürnberg
 
 ## Catering-Optionen
-### Kaspar Schmauser ⭐⭐⭐⭐
-Erfahrene Business-Catering mit Fokus auf individuelle Menügestaltung.
+### Kochkollektiv Nürnberg ⭐⭐⭐⭐⭐
+Regionales Bio-Catering mit saisonalen Menüs, Fokus auf pflanzliche Ernährung und Nachhaltigkeit.
 
-**Geschätzte Kosten:** 1800 – 2500 EUR pro Person
+**Geschätzte Kosten:** 45 – 60 EUR pro Person
 
 **Vorteile:**
-- Hohe Qualität der Speisen
-- Individuelle Anpassungen möglich
-- Gute Reputation im Geschäft
+- Regionale und saisonale Zutaten
+- Breites vegetarisches/veganes Angebot
+- Nachhaltiges Konzept (Zero Waste)
+- Erfahrung mit Konferenz-Catering
 
 **Nachteile:**
-- Höhere Kosten pro Person
-- Längere Vorbestellfrist
+- Preislich im oberen Segment
+- Begrenzte Kapazität bei kurzfristiger Buchung
 
 ---
 
-### Mischbar ⭐⭐⭐
-Spezialisiert auf Firmenfeiern mit flexiblen Menüoptionen.
+### Gaststätte Zum Goldenen Anker – Eventcatering ⭐⭐⭐
+Traditionelles fränkisches Catering mit Buffet-Service und modernen Optionen für Konferenzen.
 
-**Geschätzte Kosten:** 1500 – 2200 EUR
+**Geschätzte Kosten:** 30 – 40 EUR pro Person
 
 **Vorteile:**
-- Breite Auswahl an Speisen
-- Gute Preis-Leistung
-- Schnelle Bestellung
+- Klassische fränkische Küche
+- Gutes Preis-Leistungs-Verhältnis
+- Zuverlässige Lieferlogistik
 
 **Nachteile:**
-- Weniger technische Unterstützung
-- Begrenzte Catering-Service-Qualität
+- Weniger vegane/vegetarische Alternativen
+- Standardisiertes Angebot ohne viel Flexibilität
 
 ---
 
-### Firmenfeier & Event - Mischbar ⭐⭐⭐⭐
-Professionelle Catering-Lösung mit Fokus auf Team- und Firmenveranstaltungen.
+### FoodTruck Festival Nürnberg GmbH ⭐⭐⭐⭐
+Modernes Food-Truck-Konzept mit verschiedenen Küchen und einem informellen, netzwerkfördernden Ambiente.
 
-**Geschätzte Kosten:** 1200 – 1800 EUR
+**Geschätzte Kosten:** 35 – 50 EUR pro Person
 
 **Vorteile:**
-- Hohe Zuverlässigkeit
-- Gute Servicequalität
-- Günstige Preise für Gruppen
+- Vielfalt an Küchen und Diätoptionen
+- Informelles Networking-Ambiente
+- Skalierbar je nach Teilnehmerzahl
+- Außergewöhnliches Erlebnis für Teilnehmer
 
 **Nachteile:**
-- Weniger kreative Menügestaltung
-- Begrenzte Auswahl an Spezialitäten
+- Abhängig von Außenbereich oder großer Halle
+- Koordinationsaufwand mit mehreren Anbietern
+- Wetterbedingungen bei Outdoor-Option
 
 ---
 
