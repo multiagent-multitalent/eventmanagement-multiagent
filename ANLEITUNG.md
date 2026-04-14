@@ -63,49 +63,53 @@ Wenn keine Werte gesetzt sind, nutzt das System sinnvolle Defaults.
 
 ## 6. Programm starten
 
-Es gibt zwei Betriebsmodi.
-
-### A) Streamlit-Oberflaeche (empfohlen)
+### Terminal-CLI (Standard)
 
 ```bash
-streamlit run streamlit_app.py
+python -m src.cli
 ```
 
-Danach im Browser die angezeigte URL oeffnen (typisch `http://localhost:8501`).
+Ablauf:
 
-Ablauf in der UI:
+1. Event-Daten aus [config/event.yaml](config/event.yaml) werden geladen
+2. Wähle Venue (mit Empfehlungen)
+3. Wähle Catering-Partner
+4. Planung startet automatisch
+5. Artefakte und Logs in `workstreams/` prüfen
 
-1. Eventdaten pruefen/anpassen
-2. Stage 1 starten (Research)
-3. Venue und Catering auswaehlen
-4. Stage 2 freigeben
-5. Artefakte und Fortschritt im Dashboard pruefen
-
-### B) CLI
+### Automatischer Modus (keine Interaktion)
 
 ```bash
-python -m src.main
+python -m src.cli --auto
 ```
 
-Die CLI fuehrt Stage 1 aus, zeigt Optionen an und fragt interaktiv nach deiner Auswahl.
-
-Nutzliche Parameter:
+### Mit spezifischem Modell oder Optionen
 
 ```bash
-python -m src.main --auto
-python -m src.main --auto --venue "Nuernberg Convention Center (NCC)" --catering "Kochkollektiv Nuernberg"
-python -m src.main --provider ollama --model llama3.2 --base-url http://localhost:11434
+# Mit Venue und Catering vorwählen
+python -m src.cli --venue "Nuernberg Convention Center (NCC)" --catering "Kochkollektiv Nuernberg"
+
+# Mit lokalem Ollama-Modell
+python -m src.cli --provider ollama --model llama3.2 --base-url http://localhost:11434
+
+# Mit OpenAI oder externem Service
+python -m src.cli --provider openai --model gpt-4 --api-key sk-...
 ```
+
+Die CLI fragt interaktiv nach Venue und Catering, oder nutzt die angegebenen Werte. Siehe [docs/TERMINAL-CLI.md](docs/TERMINAL-CLI.md) für alle verfügbaren Optionen.
 
 ## 7. Wo landen die Ergebnisse?
 
-Nach erfolgreichem Lauf erzeugt das System unter anderem:
+Nach erfolgreichem Lauf erzeugt das System unter [workstreams/](workstreams/):
 
-- [workstreams/venue-logistik/venue-recherche.md](workstreams/venue-logistik/venue-recherche.md)
-- [workstreams/catering/catering-konzept.md](workstreams/catering/catering-konzept.md)
-- [workstreams/programm/agenda-entwurf.md](workstreams/programm/agenda-entwurf.md)
-- [workstreams/kommunikation/kommunikationsplan.md](workstreams/kommunikation/kommunikationsplan.md)
-- [workstreams/event-planning-output.json](workstreams/event-planning-output.json)
+- [workstreams/PLANUNGSLOG.md](workstreams/PLANUNGSLOG.md) – Master-Log aller Planungsschritte
+- [workstreams/programm/](workstreams/programm/) – Agenda, Zeitplan, Speaker
+- [workstreams/kommunikation/](workstreams/kommunikation/) – Kommunikationsplan, E-Mail-Anschreiben
+- [workstreams/venue-logistik/](workstreams/venue-logistik/) – Venue-Recherche, Logistik-Checklisten
+- [workstreams/catering/](workstreams/catering/) – Catering-Konzept und Menü-Entwürfe
+- [workstreams/[weitere Bereiche]/](workstreams/) – Teilnehmer, Technik, Personal, Sponsoring, etc.
+
+Alle Outputs sind **Markdown-Dateien** (`.md`) und können in Git verfolgt werden.
 
 Ueberblick und Fortschritt:
 
@@ -135,7 +139,8 @@ python -m unittest discover -s tests -p "test_*.py"
 ## 10. Empfohlener Standardablauf
 
 1. [config/event.yaml](config/event.yaml) und [config/team.yaml](config/team.yaml) pflegen
-2. Streamlit starten: `streamlit run streamlit_app.py`
-3. Stage 1 ausfuehren, Auswahl treffen, Stage 2 freigeben
-4. Ergebnisse in den Workstreams pruefen
-5. Entscheidungen in [CONFIRM.md](CONFIRM.md) bestaetigen
+2. Terminal-CLI starten: `python -m src.cli`
+3. Venue und Catering auswählen
+4. Automatische Planung läuft
+5. Ergebnisse in [workstreams/PLANUNGSLOG.md](workstreams/PLANUNGSLOG.md) prüfen
+6. Entscheidungen in [CONFIRM.md](CONFIRM.md) bestätigen

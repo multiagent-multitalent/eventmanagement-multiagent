@@ -20,29 +20,30 @@ Die Demo-Implementierung ist AI Transparency Days 2026 unter [examples/aitd-2026
 | Arbeitspakete | Phasenbasierter Masterplan (was zu tun ist) | [arbeitspakete/README.md](arbeitspakete/README.md) |
 | Workstreams | Laufende/generierte Artefakte (was schon erarbeitet ist) | [workstreams/README.md](workstreams/README.md) |
 | Vorlagen | Wiederverwendbare Templates nach Bereich | [templates/README.md](templates/README.md) |
-| Dashboard | Status- und Zeitsteuerung | [dashboard/status.md](dashboard/status.md), [dashboard/zeitplan.md](dashboard/zeitplan.md) |
-| Orchestrator-Code | Python-Code für CLI/UI/Workflow | [src/main.py](src/main.py), [streamlit_app.py](streamlit_app.py) |
+| Orchestrator-Code | Python-Code für Terminal-CLI | [src/cli.py](src/cli.py), [src/main.py](src/main.py) |
+| CLI-Referenz | Terminal-Kommandos und Optionen | [docs/TERMINAL-CLI.md](docs/TERMINAL-CLI.md) |
+| Markdown-Workflow | Dokumentations-Standards | [docs/MARKDOWN-WORKFLOW.md](docs/MARKDOWN-WORKFLOW.md) |
 | Demo-Outputs | Vollständiges Referenzbeispiel | [examples/README.md](examples/README.md) |
 
 ## Typischer Ablauf
 
 1. Eventdaten in [config/event.yaml](config/event.yaml) pflegen.
-2. Orchestrator starten (Agent oder Streamlit).
-3. Ergebnisse in [workstreams](workstreams) und Status in [dashboard/status.md](dashboard/status.md) prüfen.
+2. Terminal-CLI starten: `python -m src.cli`
+3. Ergebnisse in [workstreams/PLANUNGSLOG.md](workstreams/PLANUNGSLOG.md) prüfen
 4. Entscheidungen in [CONFIRM.md](CONFIRM.md) bestätigen.
 
 ## Lokaler Betrieb
 
-CLI:
+Terminal-CLI:
 
 ```bash
-python -m src.main
+python -m src.cli
 ```
 
-Streamlit:
+Automatischer Modus:
 
 ```bash
-streamlit run streamlit_app.py
+python -m src.cli --auto
 ```
 
 Smoke-Test:
