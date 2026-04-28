@@ -71,5 +71,23 @@
     "stage_name": "Planung & Content",
     "status": "completed",
     "description": "Alle Agenten haben ihre Arbeit abgeschlossen"
+  },
+  {
+    "timestamp": "2026-04-14T11:12:46.583114",
+    "type": "workflow_stage",
+    "stage": 1,
+    "stage_name": "Recherche & Marktanalyse",
+    "status": "started",
+    "description": "Research-Agent analysiert Venue- und Catering-Optionen"
+  },
+  {
+    "timestamp": "2026-04-14T11:13:38.930754",
+    "agent": "research_agent",
+    "step": "Venue- und Catering-Recherche",
+    "status": "completed",
+    "input_summary": "{\"event_data\": {\"event\": {\"name\": \"AI Transparency Days 2026\", \"short_name\": \"AITD 2026\", \"edition\": 2026, \"date_start\": \"2026-10-14\", \"date_end\": \"2026-10-16\", \"duration_days\": 3, \"city\": \"Nürnberg\", \"region\": \"Franken, Bayern\", \"country\": \"Deutschland\", \"venue\": \"TBD\", \"attendees_expected\": 125, \"attendees_min\": 100, \"attendees_max\": 150, \"format\": [\"Konferenz\", \"Workshops\", \"Hackathon\"], \"tracks\": 3, \"days_format\": \"Parallele Tracks + Hauptbühne\", \"topics\": [\"AI Transparency\", \"AI Safety\",...",
+    "output_summary": "{\"venue_options_count\": 3, \"catering_options_count\": 3}",
+    "error": null,
+    "duration_seconds": null
   }
 ]
