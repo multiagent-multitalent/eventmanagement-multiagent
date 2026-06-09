@@ -119,7 +119,29 @@ Das System basiert auf aktuellen Forschungsergebnissen im Bereich der Künstlich
 
 ---
 
-## 8. Struktur und Verzeichnisse
+## 8. Historie & Evolution: Vom Prototyp zum Framework
+
+Die Entwicklung des Systems verlief in drei markanten Phasen. Diese Historie ist entscheidend, um die heutige Architektur zu verstehen.
+
+### Phase 1: Der "AITD-Spezialist" (März 2026)
+Ursprünglich war das Repository kein allgemeines Werkzeug, sondern ein spezieller Planer für die *AI Transparency Days 2026*. 
+- **Das Problem:** Daten und Logik waren vermischt. Ergebnisse der Agenten wurden direkt in den Hauptordnern gespeichert.
+- **Der "Gedächtnis-Fehler":** Da KI-Agenten vorhandene Dokumente lesen, um Kontext zu erhalten, "erinnerten" sie sich bei jedem neuen Start an die Ergebnisse des vorherigen Laufs. Wenn man versuchte, ein anderes Event zu planen, sahen die Agenten die alten AITD-Dateien und dachten, die Arbeit sei bereits erledigt. Informationen aus dem letzten Durchlauf flossen so ungewollt in neue Planungen ein.
+
+### Phase 2: Das Universal-Repository (31. März 2026)
+Um diesen "Gedächtnis-Leak" zu stoppen, wurde das Projekt radikal umgebaut:
+- **Trennung von Demo und Kern:** Alle AITD-spezifischen Daten wurden in den Ordner `examples/aitd-2026/` verschoben.
+- **Neutralisierung:** Die Haupt-Workstreams wurden geleert und durch neutrale Vorlagen ersetzt. Das System wurde zu einem Framework, das erst durch die `config/event.yaml` erfährt, welches Event es gerade planen soll.
+- **Einführung des Orchestrators:** Mit LangGraph wurde ein echtes Zustandsmanagement (`src/state.py`) eingeführt, das den Fortschritt im Arbeitsspeicher verwaltet, statt sich nur auf vorhandene Dateien zu verlassen.
+
+### Phase 3: Der Architektur-Shift (April 2026)
+In der finalen Phase erfolgte der Wechsel der Benutzeroberfläche:
+- **Abkehr von Streamlit:** Die Browser-basierte Oberfläche wurde durch eine robustere Terminal-CLI ersetzt.
+- **Markdown-First:** Das System wechselte von flüchtigen JSON-Logs zu dauerhaften, strukturierten Markdown-Protokollen. Dies stellte sicher, dass die Dokumentation für Menschen sofort lesbar ist, während die Agenten eine klare, unmissverständliche Struktur für ihre Arbeit vorfinden.
+
+---
+
+## 9. Struktur und Verzeichnisse
 
 | Ordner | Inhalt |
 |---|---|
